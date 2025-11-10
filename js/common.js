@@ -139,78 +139,7 @@ const gnbOpen = () => {
     });
 }
 
-// 상단 설문 종료버튼
-const topClose = () => {
-    const targetLayer = document.querySelector(".top-noti");
-    const closeBtn = targetLayer.querySelector(".btn-close");
-    targetLayer.remove();
-}
 
-// 메인배너 우측 Accordion list 토글
-const bnToggle = () => {
-    const setLiHeight = (li) => {
-        li.style.height = li.scrollHeight / 10 + 'rem';
-    };
-
-    const activeList = document.querySelector(".acco-wrap li.active");
-    if(activeList){
-        setTimeout(()=>{
-            setLiHeight(activeList);
-        }, 200);
-    }
-    
-    const accoBtn = document.querySelectorAll(".acco-wrap li.item > button");
-    accoBtn.forEach((el)=>{
-        el.addEventListener("click", (e)=>{
-            e.preventDefault();
-            e.stopPropagation();
-            const li = el.parentElement;
-            const isActive = li.classList.contains('active');
-
-            if(isActive){
-                return
-            }else{
-                document.querySelectorAll(".acco-wrap li").forEach((el)=>{
-                    el.classList.remove('active');
-                    el.style.height = 11 + 'rem';
-                });
-                li.classList.add('active');
-                setLiHeight(li);
-            }
-        });
-    });
-}
-
-const accoSch = () => {
-    const setItemHeight = (item) => {
-        item.style.height = item.scrollHeight / 10 + 0.1 + 'rem';
-    };
-
-    const activeList = document.querySelector(".acco-wrap.search .item.active");
-    if(activeList){
-        setTimeout(()=>{
-            setItemHeight(activeList);
-        }, 200);
-    }
-
-    const accoBtn = document.querySelectorAll(".acco-wrap.search .item .icon-acco");
-    accoBtn.forEach((el)=>{
-        el.addEventListener("click", (e)=>{
-            e.preventDefault();
-            e.stopPropagation();
-            const targetItem = el.closest(".item");
-            const isActive = targetItem.classList.contains('active');
-
-            if(isActive){
-                targetItem.classList.remove('active');
-                targetItem.style.height = 6.5 + 'rem';
-            }else{
-                targetItem.classList.add('active');
-                setItemHeight(targetItem);
-            }
-        });
-    });
-}
 
 
 // dropdown
@@ -405,145 +334,11 @@ function initMoDropdown() {
     });
 }
 
-// scrollbar custom
-function scrollControlFn(){
-    const scrollInner = document.querySelector('.scroll');
-    const progress = document.querySelector('.scroll-controller .scroll-progress');
-    const thumb = document.querySelector('.scroll-controller .scroll-thumb');
-    const btnLeft = document.querySelector('.scroll-controller .btn-left');
-    const btnRight = document.querySelector('.scroll-controller .btn-right');
-    
-    
-    function updateThumb(){
-        const ratio = scrollInner.clientWidth / scrollInner.scrollWidth;
-        const thumbWidth = ratio * progress.clientWidth;
-        const maxScroll = scrollInner.scrollWidth - scrollInner.clientWidth;
-        const scrollRatio = scrollInner.scrollLeft / maxScroll;
-        const trackWidth = progress.clientWidth - thumbWidth;
-
-        thumb.style.width = `${thumbWidth}px`;
-        thumb.style.left = `${scrollRatio * trackWidth}px`;
-    }
-
-    updateThumb();
-
-    scrollInner.addEventListener('scroll', updateThumb);
-    window.addEventListener('resize', updateThumb);
-
-    //버튼 클릭
-    btnLeft.addEventListener('click', () => {
-        scrollInner.scrollBy({ left: -200, behavior: 'smooth' });
-    });
-    btnRight.addEventListener('click', () => {
-        scrollInner.scrollBy({ left: 200, behavior: 'smooth' });
-    });
-
-
-    let isDragging = false;
-    let startX;
-
-    thumb.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX - thumb.offsetLeft;
-        document.body.style.userSelect = 'none';
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        document.body.style.userSelect = '';
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const trackWidth = progress.clientWidth - thumb.clientWidth;
-        let newLeft = e.clientX - startX;
-        newLeft = Math.max(0, Math.min(trackWidth, newLeft));
-        thumb.style.left = `${newLeft} / 10 + rem`;
-
-        const maxScroll = scrollInner.scrollWidth - scrollInner.clientWidth;
-        const scrollRatio = newLeft / trackWidth;
-        scrollInner.scrollLeft = scrollRatio * maxScroll;
-    });
-
-    // 트랙 클릭
-    progress.addEventListener('click', (e) => {
-    // thumb 클릭시엔 무시
-        if (e.target === thumb) return;
-
-        const rect = progress.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const thumbWidth = thumb.clientWidth;
-        const trackWidth = progress.clientWidth - thumbWidth;
-
-        // 클릭 위치 기준으로 스크롤 계산
-        const newLeft = Math.max(0, Math.min(trackWidth, clickX - thumbWidth / 2));
-        const maxScroll = scrollInner.scrollWidth - scrollInner.clientWidth;
-        const scrollRatio = newLeft / trackWidth;
-        const targetScroll = scrollRatio * maxScroll;
-
-        scrollInner.scrollTo({ left: targetScroll, behavior: 'auto'});
-    });
-}
-
-//예약하기 인원추가
-function resAddFn(){
-    const usrList = document.querySelector(".usr-list");
-    if(!usrList){
-        return
-    }
-    
-    const addBtn = usrList.querySelector(".btn-add");
-    const addLi = usrList.querySelector(".add-li");
-    // 원본 li
-    const baseLi = usrList.querySelector("li:not(.add-li)");
-
-    let userIndex = 1;
-
-    addBtn.addEventListener("click", () => {
-        // li clone
-        const newLi = baseLi.cloneNode(true);
-
-        userIndex++;
-
-        // 복제한 li 내부의 input/select/textarea/id/label for 갱신
-        newLi.querySelectorAll("[id]").forEach((el) => {
-            const oldId = el.id;
-            const newId = `${oldId}_${userIndex}`;
-            el.id = newId;
-
-            // 연결된 label의 for도 함께 수정
-            const label = newLi.querySelector(`label[for='${oldId}']`);
-            if (label) label.setAttribute("for", newId);
-        });
-
-        // value init
-        newLi.querySelectorAll("input, select, textarea").forEach((el) => {
-            if (el.tagName === "SELECT") el.selectedIndex = 0;
-            else el.value = "";
-        });
-
-        // li추가
-        usrList.insertBefore(newLi, addLi);
-    });
-
-    // 삭제 버튼
-    usrList.addEventListener("click", (e) => {
-        if (e.target.classList.contains("btn-del")) {
-            e.target.closest("li").remove();
-        }
-    });
-}
-
 
 document.addEventListener('DOMContentLoaded', () => {
     DropdownMenus();
-    bnToggle();
     initTabs('.tab-container.full');
     initTabs('.tab-container.sub');
-    initTabs('.tab-container.sub.res-type');
-    initTabs('.tab-container.notice-wrap');
-    accoSch();
-    resAddFn();
      //mobile
     if (window.innerWidth > 1024) {
         gnbOpen();
@@ -555,5 +350,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
     DropdownMenus();
-    accoSch();
 });
