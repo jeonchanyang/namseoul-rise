@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>충남N잡고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="skip">
+            <li><a href="#content">본문내용 바로가기</a></li>
+            <li><a href="#gnb">주내용 바로가기</a></li>
+        </ul>
+        <header>
+            <div class="head-top">
+                <h1 class="logo"><a href="./index.html">충남N잡고 메인 로고</a></h1>
+            </div>
+
+            <div class="head-inner">
+                <div class="mnu-info">
+                    <!-- 기존 html에서 div로 묶어서 변수명.style.display="none", "flex"로 활용 -->
+                    <div class="before" style="display:none;">
+                        <p><b>홍길동</b>님 안녕하세요</p>
+                        <a href="#" class="btn-mypage" aria-label="마이페이지로 이동">마이페이지</a>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                    <div class="after" style="display:flex;">
+                        <a href="#" class="btn-logout login" aria-label="로그인 페이지로">로그인</a>
+                        <a href="#" class="btn-mypage access" aria-label="회원가입 페이지로">회원가입</a>
+                    </div>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">사업소개</li>
+                                <li>
+                                    <a href="#">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진배경 및 과제목표</a>
+                                </li>
+                                <li>
+                                    <a href="#">조직체계 및 추진내용</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진일정</a>
+                                </li>
+                                <li>
+                                    <a href="#">협력기관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">파트너십 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육프로그램</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">교육프로그램</li>
+                                <li>
+                                    <a href="#">AI산업안전관리교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">농업드론방제교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">생성형AI 이해와 직무활용</a>
+                                </li>
+                                <li>
+                                    <a href="#">구매조달교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">장애인 인식개선 강사양성</a>
+                                </li>
+                                <li>
+                                    <a href="#">귀농귀촌농업인역량강화교육</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램신청</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">프로그램신청</li>
+                                <li>
+                                    <a href="#">프로그램 신청안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">온라인 강좌</a>
+                                </li>
+                                <li>
+                                    <a href="#">오프라인 교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">수료 인증</a>
+                                </li>
+                                <li>
+                                    <a href="#">진로 연계 상담</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">뉴스·자료실</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">뉴스·자료실</li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">카드뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#">영상뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">참여마당</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">참여마당</li>
+                                <li>
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육후기</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">제안·민원접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">1:1 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-mnu">메뉴</button>
+                </nav>
+            </div>
+        </header>
+        <main class="content-wrap main" id="content">
+            <section class="inner-wrap main-bn">
+                <h2 class="h2-title">
+                    배우고, 일하고,<br>
+                    다시 배우는 지역 혁신 생태계
+                </h2>
+                <div class="slide-bn swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-lide">
+                            <p>AI산업안전관리교육</p>
+                            <img src="./images/common/icon_main_bn01.svg" alt="아이콘 이미지">
+                        </div>
+                        <div class="swiper-lide">
+                            <p>농업드론방제교육</p>
+                            <img src="./images/common/icon_main_bn02.svg" alt="아이콘 이미지">
+                        </div>
+                        <div class="swiper-lide">
+                            <p>생성형AI 이해와<br>직무활용</p>
+                            <img src="./images/common/icon_main_bn03.svg" alt="아이콘 이미지">
+                        </div>
+                        <div class="swiper-lide">
+                            <p>구매조달교육</p>
+                            <img src="./images/common/icon_main_bn04.svg" alt="아이콘 이미지">
+                        </div>
+                        <div class="swiper-lide">
+                            <p>장애인 인식개선<br>강사양성</p>
+                            <img src="./images/common/icon_main_bn05.svg" alt="아이콘 이미지">
+                        </div>
+                    </div>
+                    <div class="control01">
+                        <div class="paging"><span class="current">1</span>/<span class="max">6</span></div>
+                        <div class="btn-auto-play">
+                            <button type="button" class="btn-play">자동재생 시작</button>
+                            <button type="button" class="btn-pause">자동재생 정지</button>
+                        </div>
+                    </div>
+                    <div class="control02">
+                        <div class="btn-grp">
+                            <button type="button" class="btn-prev">이전</button>
+                            <button type="button" class="btn-next">다음</button>
+                        </div>
+                        <div class="slidebar"></div>                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="inner-wrap contents">
+                <div class="tit">
+                    <h3 class="h3-title">신규 프로그램 목록</h3>
+                    <p class="sub-disc">신규 프로그램의 일정과 내용을 빠르게 확인할 수 있습니다.</p>
+                </div>
+                <ul class="box-list">
+                    <li>
+                        <p>AI산업안전관리교육<br>첫 걸음</p>
+                        <span class="lesson">· 총 <span class="count">20</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher01.png" alt="강사 이미지">
+                            <span class="badge">강사 홍길동</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>생성형AI 이해와<br>직무활용 마스터</p>
+                        <span class="lesson">· 총 <span class="count">10</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher02.png" alt="강사 이미지">
+                            <span class="badge">강사 장동건</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>농업드론방제교육<br>첫 걸음</p>
+                        <span class="lesson">· 총 <span class="count">20</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher03.png" alt="강사 이미지">
+                            <span class="badge">강사 엔잡고</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>장애인 인식개선<br>강사양성 2단계</p>
+                        <span class="lesson">· 총 <span class="count">3</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher04.png" alt="강사 이미지">
+                            <span class="badge">강사 고소용</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>구매조달교육<br>하루 마스터</p>
+                        <span class="lesson">· 총 <span class="count">5</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher05.png" alt="강사 이미지">
+                            <span class="badge">강사 김조달</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>귀농귀촌 농업인<br>역량강화 교육</p>
+                        <span class="lesson">· 총 <span class="count">25</span>차시 ·</span>
+                        <div class="profile">
+                            <img src="./images/common/img_teacher06.png" alt="강사 이미지">
+                            <span class="badge">강사 고귀농</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="inner-wrap notice">
+                <div class="data">
+                    <div class="tit">
+                        <h3>보도자료</h3>
+                        <a href="#" class="btn-more">더보기 <i class="icon icon-more"></i></a>
+                    </div>
+                    <ul class="cont">
+                        <li>
+                            <img src="./images/common/img_data_01.webp" alt="보도자료 이미지1">
+                            <p class="cont-tit">“지역과 더 가까이” …  충남라이즈(RISE)센터,   아산시와 혁신 거버넌스 협력 강화</p>
+                            <p class="txt disc">충남도가 지역혁신중심 대학지원체계(RISE, 이하 라이즈)에 기반한 기초지자체와의 협력 강화를 통해 지역현안 해결 및 혁신기반 구축에 나선다. 특히 충남 라이즈는 시‧군-대학 연계를 두텁게 ...</p>
+                            <span class="date">2025-10-21</span>
+                        </li>
+                        <li>
+                            <img src="./images/common/img_data_02.webp" alt="보도자료 이미지2">
+                            <p class="cont-tit">충청남도 및 도내 22개 대학과 성공적 RISE 사업 위해 MOU 체결</p>
+                            <p class="txt disc">이번 협약식은 충남도청 문예회관 대강당에서 열렸으며 김태흠 충남도지사, 안순철 총장, 김동일 보령시장(충남시장군수협의회장), 강일구 호서대 총장(충남라이즈위원회 공동위원장) 등 ...</p>
+                            <span class="date">2025-07-11</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="noti-list">
+                    <div class="tit">
+                        <h3>공지사항</h3>
+                        <a href="#" class="btn-more">더보기 <i class="icon icon-more2"></i></a>
+                    </div>
+                    <div class="cont">
+                        <ul>
+                            <li>
+                                <p>2026년도 상시과정 수강신청 기간 안내</p>
+                                <span class="date">2025-10-24</span>
+                            </li>
+                            <li>
+                                <p>시스템 점검 안내안내</p>
+                                <span class="date">2025-10-23</span>
+                            </li>
+                            <li>
+                                <p>남서울대학교 산학협력 기업 모집 안내</p>
+                                <span class="date">2025-10-21</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn-noti-bn">
+                            남서울대학교 RISE 사업
+                            <span class="badge">사업소개 바로가기 <img src="/images/common/icon_arrow_right.svg" alt="바로가기 아이콘 이미지"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- 협력기관 배너 슬라이더 -->
+            <div class="bd-line-grp">
+                <div class="footer-banner-slider max-width-inner">
+                    <div class="swiper mySwiper type02">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn01.svg" alt="국토안전관리원">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn02.svg" alt="시설물통합정보관리시스템">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn03.svg" alt="한국건설기술인협회">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn01.svg" alt="국토안전관리원">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn02.svg" alt="시설물통합정보관리시스템">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn03.svg" alt="한국건설기술인협회">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn01.svg" alt="국토안전관리원">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn02.svg" alt="시설물통합정보관리시스템">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn03.svg" alt="한국건설기술인협회">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" target="_blank">
+                                    <img src="./images/common/img_footer_bn01.svg" alt="국토안전관리원">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-button">
+                        <button type="button" class="swiper-button-next"><img src="./images/common/icon_footer_btn_next.svg" alt="다음버튼 아이콘"></button>
+                        <button type="button" class="swiper-button-prev"><img src="./images/common/icon_footer_btn_prev.svg" alt="이전버튼 아이콘"></button>
+                    </div>
+                    <script>
+                    const swiper2 = new Swiper(".mySwiper.type02", {
+                        slidesPerView: "auto", // 한번에 보여지는 슬라이드 숫자
+                        slidesPerGroup: 1, // 한번에 이동되는 슬라이드 숫자
+                        loop: true,
+                        breakpoints: {
+                            0: {
+                                spaceBetween: 14,
+                            },
+                            1024: {
+                                spaceBetween: 28
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".footer-banner-slider .swiper-button-next",
+                            prevEl: ".footer-banner-slider .swiper-button-prev",
+                        },
+                    });
+                    /* 자동재생 추후 적용 여부 확인 후 추가해서 적용
+                    // 정지 버튼 
+                    document.querySelector(".mySwiper.type02 .swiper-autoplay-button .pause").addEventListener("click", function() {
+                        swiper2.autoplay.stop();
+                        this.style.display = "none";
+                        document.querySelector(".mySwiper.type02 .swiper-autoplay-button .play").style.display = "block";
+                    });
+    
+                    // 재생 버튼
+                    document.querySelector(".mySwiper.type02 .swiper-autoplay-button .play").addEventListener("click", function() {
+                        swiper2.autoplay.start();
+                        this.style.display = "none";
+                        document.querySelector(".mySwiper.type02 .swiper-autoplay-button .pause").style.display = "block";
+                    });
+                    */
+                    </script>
+                </div>
+            </div>
+            <!-- 약관/패밀리사이트 등 상단 정보 -->
+            <div class="footer-cont max-width-inner">
+                <div class="logo-grp">
+                    <h3><a href="./index.html" class="footer-logo"><img src="./images/common/icon_footer_logo.svg" alt="국토안전관리원"></a></h3>
+                </div>
+                <div class="address-grp">
+                    <div class="link-area">
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <div class="txt-list">
+                        <p>31020 충청남도 천안시 서북구성환읍 대학로 91</p>
+                        <dl>
+                            <dt>개인정보 보호책임자</dt>
+                            <dd>kigon@nsu.ac.kr</dd>
+                            <dt>TEL</dt>
+                            <dd>041-580-2000</dd>
+                            <dt>FAX</dt>
+                            <dd>041-582-2117</dd>
+                            <dt>Email</dt>
+                            <dd>webmaster@nsu.ac.kr</dd>
+                        </dl>
+                    </div>
+                    <address>© 2025 BY NAMSEOUL UNIVERSITY. ALL RIGHTS RESERVED.</address>
+                </div>
+                <div class="family-grp">
+                    <div class="dropdown-wrap">
+                        <button type="button" class="btn btn-dropdown">
+                            패밀리사이트
+                        </button>
+                        <div class="dropdown-list is-up is-open">
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트1</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트2</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트3</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트4</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트5</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트6</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트7</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트8</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트9</a>
+                            <a href="#" class="footer-link" target="_blank">패밀리사이트10</a>           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            scrollControlFn();
+        });
+
+        const notiSwiper = new Swiper(".noti-gen .swiper.noti", {
+            direction: "vertical",
+            slidesPerView: "1", // 한번에 보여지는 슬라이드 숫자
+            loop: true,
+            autoplay: true,
+            navigation: {
+                prevEl: ".noti-grp .btn-grp .btn-up",
+                nextEl: ".noti-grp .btn-grp .btn-down",
+            },
+        });
+    </script>
+</body>
+</html>
