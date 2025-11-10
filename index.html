@@ -156,10 +156,10 @@
                 <h2 class="h2-title">
                     배우고, 일하고,<br>
                     다시 배우는 지역 혁신 생태계
-                    <div class="toggle-grp">
+                    <span class="toggle-grp">
                         <span class="on">남서울대학교 RISE 사업</span>
                         <span>생애주기별 평생직업교육체계 구축 과제</span>
-                    </div>
+                    </span>
                 </h2>
                 <div class="slide-bn swiper">
                     <div class="swiper-wrapper">
@@ -493,50 +493,19 @@
     </div>
     <script src="./js/common.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btnPlay = document.querySelector('.btn-play');
-            const btnPause = document.querySelector('.btn-pause');
+    document.addEventListener('DOMContentLoaded', () => {
+        const slideWrapper = document.querySelector('.swiper.slide-bn .swiper-wrapper');
+        const slides = slideWrapper.querySelectorAll('.swiper-slide');
+        const origCount = slides.length;
 
-            // 초기 상태: 정지 버튼만 보이게 (autoplay 동작 중이므로)
-            btnPlay.style.display = 'none';
-            btnPause.style.display = 'block';
-
-            // ▶ 자동재생 시작
-            btnPlay.addEventListener('click', () => {
-                mainBnSwiper.autoplay.start();
-                btnPlay.style.display = 'none';
-                btnPause.style.display = 'block';
-            });
-
-            // ⏸ 자동재생 정지
-            btnPause.addEventListener('click', () => {
-                mainBnSwiper.autoplay.stop();
-                btnPause.style.display = 'none';
-                btnPlay.style.display = 'block';
-            });
-
-            // pagination indicator
-            var $dotList = $(".slidebar .swiper-pagination-bullet");
-            var dotCnt = $dotList.length;
-            $dotList.each(function(){
-                $(this).attr("style", "width:"+(100/dotCnt).toFixed(3)+"%;");
-            });
-        });
-
-        const mainBnSwiper = new Swiper(".swiper.slide-bn", {
-            slidesPerView: "auto", // 한번에 보여지는 슬라이드 숫자
-            slidesPerGroup: 1,
-            loop: false,
-            loopAdditionalSlides:2,
+        const mainBnSwiper = new Swiper('.swiper.slide-bn', {
+            slidesPerView: 'auto',
             spaceBetween: 24,
-            // autoplay: true,
-            speed:1000,
-            allowTouchMove: false,
-            mousewheelControl: false,
-            observer: true,
-            observeParents: true,
+            loop: true,
+            loopedSlides: origCount,
+            speed: 1000,
             autoplay: {
-                delay: 3000, // 3초마다
+                delay: 3000,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -545,26 +514,65 @@
                 clickable: true,
             },
             navigation: {
-                prevEl: ".control02 .btn-grp .btn-prev",
-                nextEl: ".control02 .btn-grp .btn-next",
+                prevEl: '.control02 .btn-grp .btn-prev',
+                nextEl: '.control02 .btn-grp .btn-next',
             },
-            on : {
-                init : function () {
-                    // 총 슬라이드 개수 표시
-                    const totalSlides = this.slides.length;
-                    document.querySelector('.control01 .max').textContent = totalSlides;
-
-                    // 현재 슬라이드 표시
-                    document.querySelector('.control01 .current').textContent = this.realIndex + 1;
+            on: {
+                init(swiper) {
+                    document.querySelector('.control01 .max').textContent = origCount;
+                    document.querySelector('.control01 .current').textContent = swiper.realIndex + 1;
+                    resetSlideSize(swiper);
+                    applyActiveSize(swiper);
                 },
-                slideChange : function() {
-                    document.querySelector('.control01 .current').textContent = this.realIndex + 1;
-                },
-                slideChangeTransitionEnd() {
-                    this.update();
+                slideChange(swiper) {
+                    resetSlideSize(swiper);
+                    applyActiveSize(swiper);
+                    document.querySelector('.control01 .current').textContent = swiper.realIndex + 1;
                 },
             },
         });
+
+        // 각 slide width init
+        function resetSlideSize(swiper) {
+            swiper.slides.forEach(slide => {
+                const link = slide.querySelector('a');
+                if (!link) return;
+                link.style.transition = 'none';
+                link.style.width = '24rem';
+                link.style.height = '26.8rem';
+                link.style.marginTop = '4.2rem';
+            });
+        }
+
+        function applyActiveSize(swiper) {
+            const activeSlide = swiper.slides[swiper.activeIndex].querySelector('a');
+            if (activeSlide) {
+                activeSlide.style.transition = 'none';
+                activeSlide.style.width = '38.9rem';
+                activeSlide.style.height = '31rem';
+                activeSlide.style.marginTop = '0';
+            }
+        }
+
+        // 자동재생 버튼 로직
+        const btnPlay = document.querySelector('.btn-play');
+        const btnPause = document.querySelector('.btn-pause');
+        if (btnPlay && btnPause) {
+            btnPlay.style.display = 'none';
+            btnPause.style.display = 'block';
+
+            btnPlay.addEventListener('click', () => {
+                mainBnSwiper.autoplay.start();
+                btnPlay.style.display = 'none';
+                btnPause.style.display = 'block';
+            });
+            btnPause.addEventListener('click', () => {
+                mainBnSwiper.autoplay.stop();
+                btnPause.style.display = 'none';
+                btnPlay.style.display = 'block';
+            });
+        }
+    });
     </script>
 </body>
 </html>
