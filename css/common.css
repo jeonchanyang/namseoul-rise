@@ -138,6 +138,7 @@ footer{background:#fff;}
 .footer-cont .txt-list dl dt{font-weight:700;}
 .footer-cont .txt-list dl dd + dt{margin-left:.5rem;}
 .footer-cont address{margin-top:1rem;}
+.footer-banner-slider, .footer-cont{padding-left:2rem; padding-right:2rem;}
 
 /* dropdown */
 .dropdown-wrap{width:24rem;}
