@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>충남N잡고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="skip">
+            <li><a href="#content">본문내용 바로가기</a></li>
+            <li><a href="#gnb">주내용 바로가기</a></li>
+        </ul>
+        <header>
+            <div class="head-top">
+                <h1 class="logo"><a href="./index.html">충남N잡고 메인 로고</a></h1>
+            </div>
+
+            <div class="head-inner">
+                <div class="mnu-info">
+                    <!-- 기존 html에서 div로 묶어서 변수명.style.display="none", "flex"로 활용 -->
+                    <div class="before" style="display:none;">
+                        <p><b>홍길동</b>님 안녕하세요</p>
+                        <a href="#" class="btn-mypage" aria-label="마이페이지로 이동">마이페이지</a>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                    <div class="after" style="display:flex;">
+                        <a href="#" class="btn-logout login" aria-label="로그인 페이지로">로그인</a>
+                        <a href="#" class="btn-mypage access" aria-label="회원가입 페이지로">회원가입</a>
+                    </div> 
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">사업소개</li>
+                                <li>
+                                    <a href="#">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진배경 및 과제목표</a>
+                                </li>
+                                <li>
+                                    <a href="#">조직체계 및 추진내용</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진일정</a>
+                                </li>
+                                <li>
+                                    <a href="#">협력기관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">파트너십 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육프로그램</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">교육프로그램</li>
+                                <li>
+                                    <a href="./02_교육프로그램_01_AI산업안전관리교육_02_교육프로그램소개_01.html">AI산업안전관리교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">농업드론방제교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">생성형AI 이해와 직무활용</a>
+                                </li>
+                                <li>
+                                    <a href="#">구매조달교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">장애인 인식개선 강사양성</a>
+                                </li>
+                                <li>
+                                    <a href="#">귀농귀촌농업인역량강화교육</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램신청</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">프로그램신청</li>
+                                <li>
+                                    <a href="#">프로그램 신청안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">온라인 강좌</a>
+                                </li>
+                                <li>
+                                    <a href="#">오프라인 교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">수료 인증</a>
+                                </li>
+                                <li>
+                                    <a href="#">진로 연계 상담</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">뉴스·자료실</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">뉴스·자료실</li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">카드뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#">영상뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">참여마당</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">참여마당</li>
+                                <li>
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육후기</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">제안·민원접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">1:1 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-mnu">메뉴</button>
+                </nav>
+            </div>
+        </header>
+        <main class="content-wrap sub" id="content">
+            <div class="location">
+                <ol>
+                    <li>
+                        <a href="./index.html" aria-label="메인 화면으로 이동"><i class="ico icon-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">교육프로그램</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">AI산업안전관리교육</a>
+                    </li>
+                </ol>
+            </div>
+            <section class="inner-wrap">
+                <h2 class="h2-title">AI산업안전관리교육</h2>
+
+                <div class="tab-container sub has-img">
+                        <ul class="tab-head">
+                            <li><button type="button" class="tab-menu" data-tab="tab1-con1">교육개요</button></li>
+                            <li><button type="button" class="tab-menu is-active" data-tab="tab1-con2">교육 프로그램 소개</button></li>
+                            <li><button type="button" class="tab-menu" data-tab="tab1-con3">실습사례</button></li>
+                        </ul>
+                        <div class="tab-content-wrap">
+                            <div class="tab-content" id="tab1-con1">
+                                11111
+                            </div>
+                            <div class="tab-content is-active" id="tab1-con2">
+                                <p class="info-txt">
+                                    AI 기술로 산업현장의 안전을 증진시키는 방법을 학습합니다.<br>
+                                    산업안전 담당자 뿐만 아니라 현장 관리 감독자, 경영진도 대상이 될 수 있으며,<br>
+                                    중대재해처벌법 대응을 위한 AI 활용 지식을 제공하는 것이 핵심 목표입니다.
+                                </p>
+
+                                <div class="acco-wrap">
+                                    <ul class="list">
+                                        <li class="on">
+                                            <button class="btn-acco">
+                                                <span class="badge">1교시</span>
+                                                <strong class="tit">AI, 피할 수 없는 변화와 산업의 미래</strong>
+                                                <i class="icon-arrow"></i>
+                                            </button>
+                                            <div class="list-answer">
+                                                <dl class="bg-box">
+                                                    <dt>학습목표</dt>
+                                                    <dd>AI가 가져올 근본적인 변화를 이해하고, 산업 현장에서 AI를 활용해야 하는 이유와 미래 경쟁력을 인지</dd>
+                                                </dl>
+
+                                                <dl class="list-txt">
+                                                    <dt>주요학습<br class="pc-only">목표</dt>
+                                                    <dd>
+                                                        <p class="bullet">AI가 개인의 삶과 산업 전반에 미치는 근본적인 변화 이해</p>
+                                                        <p class="bullet">AI 기술 도입이 기업의 <b>경제적 가치 창출</b> 및 미래 <b>경쟁력 확보</b>에 필수적인 이유 설명</p>
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl class="list-txt">
+                                                    <dt>세부 내용 및<br class="pc-only"> 활동</dt>
+                                                    <dd>
+                                                        <p class="bullet"><b>AI를 바라보는 올바른 관점</b> : '기술'이 아닌 '전략'으로서 AI의 중요성 인식</p>
+                                                        <p class="bullet"><b>산업 현장에서의 AI 적용 사례</b> : 제조업, 건설업 등 다양한 분야에서 AI가 생산성 향상, 비용 절감, 품질 개선에 어떻게 기여하는지 구체적인 사례 분석 (예: 스마트 팩토리, AI 검사 시스템 등)</p>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="btn-acco">
+                                                <span class="badge">2교시</span>
+                                                <strong class="tit">근로자가 알아야 할 AI의 능력과 한계</strong>
+                                                <i class="icon-arrow"></i>
+                                            </button>
+                                            <div class="list-answer">
+                                                <dl class="bg-box">
+                                                    <dt>학습목표</dt>
+                                                    <dd>AI의 현재 능력과 한계를 정확히 파악하여, AI에 대한 막연한 기대나 회피를 막고 현명하게 활용</dd>
+                                                </dl>
+
+                                                <dl class="list-txt">
+                                                    <dt>주요학습<br class="pc-only">목표</dt>
+                                                    <dd>
+                                                        <p class="bullet">AI가 '스스로 학습'하는 것이 아닌, <b>'사람의 지식(알고리즘)'을 이용</b>하여 작동하는 원리 이해</p>
+                                                        <p class="bullet">'배운 것만 아는 AI'의 특성을 이해하고, AI 기술 활용 시 인간의 감독과 판단이 필수적임을 인지</p>
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl class="list-txt">
+                                                    <dt>세부 내용 및<br class="pc-only"> 활동</dt>
+                                                    <dd>
+                                                        <p class="bullet"><b>AI 작동 원리 이해</b>: AI가 데이터를 통해 학습하고 패턴을 인식하는 과정을 간단한 비유와 사례로 설명 (예: 고양이/개 이미지 분류 과정)</p>
+                                                        <p class="bullet"><b>인간의 역할 강조</b>: AI의 한계를 보완하고 최종 판단을 내리는 인간의 중요성을 강조</p>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="btn-acco">
+                                                <span class="badge">3교시</span>
+                                                <strong class="tit">중대재해처벌법 핵심 이해</strong>
+                                                <i class="icon-arrow"></i>
+                                            </button>
+                                            <div class="list-answer">
+                                                <dl class="bg-box">
+                                                    <dt>학습목표</dt>
+                                                    <dd>중대재해처벌법의 주요 내용을 정확히 이해하고 법적 대응 및 AI 도입의 필요성 인지</dd>
+                                                </dl>
+
+                                                <dl class="list-txt">
+                                                    <dt>주요학습<br class="pc-only">목표</dt>
+                                                    <dd>
+                                                        <p class="bullet">중대재해처벌법의 적용 대상(사업주, 경영책임자) 및 처벌 수위를 명확히 이해</p>
+                                                        <p class="bullet">중대재해 예방을 위한 AI 기술 도입의 <b>법적 당위성</b>과 <b>실질적 필요성</b> 인지</p>
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl class="list-txt">
+                                                    <dt>세부 내용 및<br class="pc-only"> 활동</dt>
+                                                    <dd>
+                                                        <p class="bullet"><b>중대재해처벌법 개요</b>: 법의 제정 배경, 적용 범위 (상시 근로자 5인 이상 사업장), 처벌 규정(경영책임자 처벌, 법인 벌금) 상세 설명</p>
+                                                        <p class="bullet"><b>AI 도입과 법적 의무 이행</b>: AI 기반 시스템이 안전보건관리체계의 어떤 요소를 강화하고 법적 리스크를 어떻게 경감시킬 수 있는지 설명</p>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button class="btn-acco">
+                                                <span class="badge">4교시</span>
+                                                <strong class="tit">AI산업안전 솔루션 실습 및 적용</strong>
+                                                <i class="icon-arrow"></i>
+                                            </button>
+                                            <div class="list-answer">
+                                                <dl class="bg-box">
+                                                    <dt>학습목표</dt>
+                                                    <dd>최신 AI 안전 솔루션을 이해하고, 실제 현장 적용 능력과 윤리적 대응 능력을 함양</dd>
+                                                </dl>
+
+                                                <dl class="list-txt">
+                                                    <dt>주요학습<br class="pc-only">목표</dt>
+                                                    <dd>
+                                                        <p class="bullet">AI Vision 기반 <b>안전모/쓰러짐/화재 감지</b> 등 주요 산업안전 솔루션의 작동 원리와 기능 이해</p>
+                                                        <p class="bullet">실제 현장에 AI 안전 솔루션을 효과적으로 도입하고 관리하기 위한 전략 수립</p>
+                                                    </dd>
+                                                </dl>
+                                                
+                                                <dl class="list-txt">
+                                                    <dt>세부 내용 및<br class="pc-only"> 활동</dt>
+                                                    <dd>
+                                                        <p class="bullet"><b>실시간 데모</b>: AI Vision 시스템을 통해 안전모 미착용, 작업자 쓰러짐, 연기/화재 발생 상황이 어떻게 감지되고 알림이 전송되는지 실제 시스템 시연</p>
+                                                        <p class="bullet"><b>AI 도입의 경제성</b>: 중대재해 예방을 통한 비용 절감 효과, 생산성 향상 효과 논의</p>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab1-con3">
+                                6
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer>
+            <!-- 약관/패밀리사이트 등 상단 정보 -->
+            <div class="footer-cont max-width-inner">
+                <div class="logo-grp">
+                    <h3><a href="./index.html" class="footer-logo"><img src="./images/common/icon_footer_logo.svg" alt="국토안전관리원"></a></h3>
+                </div>
+                <div class="address-grp">
+                    <div class="link-area">
+                        <a href="#" class="fwb">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <div class="txt-list">
+                        <p>31020 충청남도 천안시 서북구성환읍 대학로 91</p>
+                        <dl>
+                            <dt>개인정보 보호책임자</dt>
+                            <dd>kigon@nsu.ac.kr</dd>
+                            <dt>TEL</dt>
+                            <dd>041-580-2000</dd>
+                            <dt>FAX</dt>
+                            <dd>041-582-2117</dd>
+                            <dt>Email</dt>
+                            <dd>webmaster@nsu.ac.kr</dd>
+                        </dl>
+                    </div>
+                    <address>© 2025 BY NAMSEOUL UNIVERSITY. ALL RIGHTS RESERVED.</address>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

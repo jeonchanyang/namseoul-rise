@@ -139,9 +139,6 @@ const gnbOpen = () => {
     });
 }
 
-
-
-
 // dropdown
 function DropdownMenus() {
     const dropdownButtons = document.querySelectorAll(".btn-dropdown");
@@ -334,11 +331,33 @@ function initMoDropdown() {
     });
 }
 
+// bbs - accodion
+function bbsAccoFn() {
+    const accoBtn = document.querySelectorAll('.acco-wrap li .btn-acco');
+    if (!accoBtn) return;
+
+    accoBtn.forEach((el) => {
+        el.addEventListener('click', (e) => {
+            const targetItem = e.currentTarget.closest("li");
+            const list = targetItem.parentElement.querySelectorAll("li");
+
+            // 모든 형제 li에서 on 제거
+            list.forEach(li => {
+                li.classList.remove('on');
+            });
+
+            // 클릭한 li만 toggle
+            targetItem.classList.add('on');
+        });
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     DropdownMenus();
     initTabs('.tab-container.full');
     initTabs('.tab-container.sub');
+    bbsAccoFn();
      //mobile
     if (window.innerWidth > 1024) {
         gnbOpen();
