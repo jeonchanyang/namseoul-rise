@@ -12,6 +12,18 @@ header .head-inner{flex-grow:1; }
 header .head-inner nav{display:flex; justify-content:flex-end; gap:4rem; width:100%; margin-top:2rem;}
 header .head-inner nav .btn-mnu{display:inline-block; position:relative; top:2.3rem; width:1.8rem; height:1.6rem; text-indent:-9999px; background:url(../images/common/icon_menu_all.svg) center center / 100% no-repeat;}
 
+/* input */
+input{outline:none; border:none;}
+select{appearance:none;}
+.ipt::placeholder, textarea::placeholder{color:#BFC0C4;}
+.ipt[readonly]{background-color:transparent; border-color:#D9D9D9;}
+.ipt{min-width:14.5rem; color:#121212; padding:1.3rem 2rem; line-height:2.4rem; font-size:var(--font-size-18); background:#fff; border:.1rem solid #A6A8AB; border-radius:1rem; outline:none;}
+select.ipt{padding-right:4rem; background:#fff url(../images/common/icon_select_arrow.svg) right 1.9rem center / 1.4rem 1.4rem no-repeat;}
+input[type="password"]{padding-right:3.5rem; background-image:url(../images/common/icon_lock.svg); background-position:center right 2rem; background-size:1.4rem 1.6rem ; background-repeat:no-repeat;}
+.ipt02{width:100%; height:3.4rem; padding-bottom:1rem; font-weight:400; line-height:2.4rem; font-size:2rem; background:transparent; border:none; border-bottom:.1rem solid #000;}
+textarea.ipt02{min-height:6.5rem; resize: none;}
+select.ipt02{background:url(../images/common/icon_select_down.svg) right top .6rem / 1.4rem 1.2rem no-repeat;}
+.txtarea textarea{max-width:100%; width:100%; height:100%; padding:1.8rem 1.6rem; line-height:2.4rem; font-size:var(--font-size-18); border:.1rem solid #A6A8AB;}
 
 
 .gnb{display:flex; align-items:center;}
@@ -55,6 +67,7 @@ header .head-inner nav .btn-mnu{display:inline-block; position:relative; top:2.3
 .ico{display:inline-flex; justify-content:center; align-items:center; width:2rem; height:2rem; background-repeat:no-repeat;}
 .ico::before{content:''; display:block; width:100%; height:100%; background-size:contain; background-repeat:no-repeat;}
 .icon-home::before{background:url(../images/common/icon_home.svg) center center / 100% no-repeat;}
+.icon-search::before{background-image:url(../images/common/icon_search.svg);}
 
 /* location */
 .location ol{display:inline-flex; gap:1.2rem; align-items:center;}
