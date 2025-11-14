@@ -119,7 +119,6 @@
 .inner-wrap .h2-title{font-weight:500; font-size:6rem;}
 .inner-wrap .h2-title + .tab-container.sub{padding-top:8.5rem;}
 
-
 /* tab */
 .tab-container.sub{position:relative;}
 .tab-container.sub .tab-head{display:flex; gap:6rem; border-bottom:.1rem solid #9C9C9C;}
@@ -134,7 +133,7 @@
 .tab-container.sub .tab-head + .tab-content-wrap{margin-top:5rem;}
 .tab-container.sub .tab-content{display:none; min-height:30rem;}
 .tab-container.sub .tab-content.is-active{display:block;}
-.tab-container.sub .tab-content p{font-size:2rem;}
+.tab-container.sub .tab-content p{font-size:1.8rem;}
 .tab-container.sub .tab-content .info-txt{font-weight:500; line-height:160%;}
 .tab-container.sub .tab-content .info-txt + .acco-wrap{margin-top:3.6rem;}
 .tab-container.sub.has-img{background:url(/images/common/icon_tab_gril.webp) right top 1.3rem / 32.3rem 26.4rem no-repeat;}
@@ -143,18 +142,18 @@
 .acco-wrap .list li + li{margin-top:1rem;}
 .acco-wrap .list li > .btn-acco{display:flex; gap:2.7rem; align-items:center; width:100%; padding:3rem 4rem;}
 .acco-wrap .list li .badge{display:inline-block; height:3.6rem; padding:.2rem 1.8rem; color:#fff; font-weight:500; line-height:160%; font-size:2rem; background:#9C9C9C; border-radius:1.8rem;}
-.acco-wrap .list li .tit{font-weight:700; line-height:160%; font-size:3rem;}
+.acco-wrap .list li .tit{font-weight:700; line-height:160%; font-size:2.4rem;}
 .acco-wrap .list li .icon-arrow{display:inline-block; position:absolute; top:4.9rem; right:4rem;  width:2rem; height:1.2rem; background:url(../images/common/icon_bbs_arrow.svg) center center / 100% no-repeat;}
 .acco-wrap .list-answer{display:none; padding:0 4rem 7rem;}
 .bg-box{display:flex; gap:8rem; align-items:center; padding:2.7rem 5rem; background:rgba(227, 229, 234, 0.5); border-radius:1rem;}
-.bg-box dt{color:#009BB4; font-weight:700; font-size:1.6rem;}
-.bg-box dd{position:relative; font-weight:400; font-size:2rem;}
+.bg-box dt{color:#009BB4; font-weight:700; font-size:2rem;}
+.bg-box dd{position:relative; font-weight:400; font-size:1.8rem;}
 .bg-box dd::before{content:''; display:inline-block; position:absolute; top:0; left:-4rem; width:.1rem; height:2.6rem; background:rgba(128, 129, 131, 0.5);}
 .acco-wrap .bg-box + .list-txt{margin-top:4rem;}
 .list-txt + .list-txt{margin-top:2rem;}
 .list-txt{display:flex;}
-.list-txt dt{flex:0 0 auto; width:17rem; font-weight:700; line-height:120%; font-size:2.4rem;}
-.list-txt dd{flex-grow:1; line-height:160%; font-size:2rem;}
+.list-txt dt{flex:0 0 auto; width:17rem; padding:.5rem 0; font-weight:700; line-height:120%; font-size:2rem;}
+.list-txt dd{flex-grow:1; line-height:160%; font-size:1.8rem;}
 
 .acco-wrap .list li.on .list-answer{display:block}
 .acco-wrap .list li.on .badge{background:#003B90;}
@@ -194,6 +193,7 @@
 .bbs-gen-list li + li{margin-top:1.6rem;}
 .bbs-gen-list li > a{display:flex; overflow:hidden; background:#fff; border-radius:2rem;}
 .bbs-gen-list + .search-area{justify-content:center; margin-top:4rem;}
+.bbs-gen-list li .txt-grp .date{display:block; color:#6E6E6E; font-weight:400; line-height:2.4rem; font-size:1.8rem;}
 
 .news .bbs-gen-list li > a{height:20rem;}
 .news .bbs-gen-list li .img-grp{flex:0 0 auto; width:30.8rem; height:100%;}
@@ -201,10 +201,18 @@
 .news .bbs-gen-list li .txt-grp{padding:3rem 4rem;}
 .news .bbs-gen-list li .txt-grp .tit{display:block; font-weight:700; line-height:3rem; font-size:2.4rem;}
 .news .bbs-gen-list li .txt-grp .txt{display:-webkit-box; overflow:hidden; color:#6E6E6E; font-weight:400; line-height:140%; font-size:1.8rem; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:2;}
-.news .bbs-gen-list li .txt-grp .date{display:block; color:#6E6E6E; font-weight:400; line-height:2.4rem; font-size:1.8rem;}
-
 .news .bbs-gen-list li .txt-grp .tit + .txt{margin-top:1rem;}
 .news .bbs-gen-list li .txt-grp .txt + .date{margin-top:2.4rem;}
+
+.edu .bbs-gen-list li > a{align-items:center; height:9rem; padding:3rem 4rem;}
+.edu .bbs-gen-list li a .txt-grp{display:flex; gap:2rem; justify-content:space-between; width:100%;}
+.edu .bbs-gen-list li a .txt-grp .tit{flex-grow:1; display:inline-block; overflow:hidden; width:calc(100% - 20rem); font-size:2rem; text-overflow:ellipsis; white-space:nowrap;}
+.edu .bbs-gen-list li a .txt-grp .date{}
+
+
+
+
+
 
 .bbs-view{padding:8rem 6rem 7rem; background:#fff; border-radius:2rem;}
 .bbs-view .tit-grp{padding-bottom:2rem; border-bottom:.1rem solid #A6A8AB;}
