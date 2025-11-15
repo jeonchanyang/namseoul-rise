@@ -72,7 +72,7 @@ select.ipt02{background:url(../images/common/icon_select_down.svg) right top .6r
 /* location */
 .location ol{display:inline-flex; gap:1.2rem; align-items:center;}
 .location li + li{position:relative;}
-.location li + li::before{content:''; display:inline-block; width:.8rem; height:1.2rem; margin-right:1.2rem; background:url(/images/common/icon_lo_arrow.svg) center center / 100% no-repeat;}
+.location li + li::before{content:''; display:inline-block; width:.8rem; height:1.2rem; margin-right:1.2rem; background:url(../images/common/icon_lo_arrow.svg) center center / 100% no-repeat;}
 .location li a{font-weight:500; font-size:1.6rem;}
 .location .icon-home{width:1.5rem; height:1.6rem;}
 .location + .inner-wrap{margin-top:2rem;}
