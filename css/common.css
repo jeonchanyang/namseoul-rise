@@ -68,6 +68,8 @@ select.ipt02{background:url(../images/common/icon_select_down.svg) right top .6r
 .ico::before{content:''; display:block; width:100%; height:100%; background-size:contain; background-repeat:no-repeat;}
 .icon-home::before{background:url(../images/common/icon_home.svg) center center / 100% no-repeat;}
 .icon-search::before{background-image:url(../images/common/icon_search.svg);}
+.icon-h3::before{background-image:url(../images/common/icon_h3.svg);}
+
 
 /* location */
 .location ol{display:inline-flex; gap:1.2rem; align-items:center;}
