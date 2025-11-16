@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>충남N잡고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <style>
+        body {background-color: #003B90;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="skip">
+            <li><a href="#content">본문내용 바로가기</a></li>
+            <li><a href="#gnb">주내용 바로가기</a></li>
+        </ul>
+        <header>
+            <div class="head-top">
+                <h1 class="logo"><a href="./index.html">충남N잡고 메인 로고</a></h1>
+                <button type="button" class="btn-gnb">GNB 열기</button>
+            </div>
+
+            <div class="head-inner">
+                <div class="mnu-info">
+                    <!-- 기존 html에서 div로 묶어서 변수명.style.display="none", "flex"로 활용 -->
+                    <div class="before" style="display:none;">
+                        <p><b>홍길동</b>님 안녕하세요</p>
+                        <a href="#" class="btn-mypage" aria-label="마이페이지로 이동">마이페이지</a>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                    <div class="after" style="display:flex;">
+                        <a href="#" class="btn-logout login" aria-label="로그인 페이지로">로그인</a>
+                        <a href="#" class="btn-mypage access" aria-label="회원가입 페이지로">회원가입</a>
+                    </div>
+                    <button type="button" class="btn-close-gnb">GNB 닫기</button>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">사업소개</li>
+                                <li>
+                                    <a href="#">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진배경 및 과제목표</a>
+                                </li>
+                                <li>
+                                    <a href="#">조직체계 및 추진내용</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진일정</a>
+                                </li>
+                                <li>
+                                    <a href="#">협력기관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">파트너십 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육프로그램</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">교육프로그램</li>
+                                <li>
+                                    <a href="./02_교육프로그램_01_AI산업안전관리교육_02_교육프로그램소개_01.html">AI산업안전관리교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">농업드론방제교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">생성형AI 이해와 직무활용</a>
+                                </li>
+                                <li>
+                                    <a href="#">구매조달교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">장애인 인식개선 강사양성</a>
+                                </li>
+                                <li>
+                                    <a href="#">귀농귀촌농업인역량강화교육</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램신청</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">프로그램신청</li>
+                                <li>
+                                    <a href="#">프로그램 신청안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">온라인 강좌</a>
+                                </li>
+                                <li>
+                                    <a href="#">오프라인 교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">수료 인증</a>
+                                </li>
+                                <li>
+                                    <a href="#">진로 연계 상담</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">뉴스·자료실</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">뉴스·자료실</li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">카드뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#">영상뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">참여마당</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">참여마당</li>
+                                <li>
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육후기</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">제안·민원접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">1:1 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-mnu">메뉴</button>
+                </nav>
+            </div>
+        </header>
+        <main class="content-wrap sub" id="content">
+            <div class="location">
+                <ol>
+                    <li>
+                        <a href="./index.html" aria-label="메인 화면으로 이동"><i class="ico icon-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">사업소개</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">과제목표 및 추진전략</a>
+                    </li>
+                </ol>
+            </div>
+            <section class="inner-wrap business-cont">
+                <h2 class="h2-title">과제목표 및 추진전략</h2>
+                <div class="inner">
+                    <span class="box-visual"></span>
+                    <div class="box-radius cont">
+                        <p class="txt-intro">
+                            지역 인구 감소 문제 해결, 지역경제 활력을 되찾기 위해,<span class="br-mo"></span>
+                            청년층 고용 확대와 지역 정착 유도, 중장년층이 정주할 수 있는 환경 조성추진
+                        </p>
+                        <ul class="list-diagram">
+                            <li>
+                                <strong class="tit">지역산업 <span class="br-mo"></span>성장동력 강화</strong>
+                                <b class="emphasis">지역 소멸 위기 대응</b>
+                                <span class="txt">지역산업 성장으로 <br>청년 인구 증가와 경제 활성화</span>
+                            </li>
+                            <li>
+                                <strong class="tit">지역수요 맞춤형 <span class="br-mo"></span>인재 양성</strong>
+                                <b class="emphasis">지역 산업 수요 대응</b>
+                                <span class="txt">지역 산업체 인력수요 불일치 <br>해소를 위한 교육과정 개선</span>
+                            </li>
+                            <li>
+                                <strong class="tit">지역 정주환경 <span class="br-mo"></span>개선</strong>
+                                <b class="emphasis">지역 정주 여건 개선</b>
+                                <span class="txt">지역 내 취업 및 정주로 <br>이어지는 선순환 구조 마련</span>
+                            </li>
+                        </ul>
+                        <h3 class="icon-sub-tit">추진전략</h3>
+                        <p class="box-radius shadow">생애주기별 직무교육과 AI기반 학습을 통해 지역맞춤형 평생직업교육체계 구축</p>
+                        <div class="box-area col-2">
+                            <div class="box-radius tit">
+                                <h4 class="tit">중소ㆍ중견기업 재직자 교육</h4>
+                                <div class="box-area col-2">
+                                    <dl class="list-dot">
+                                        <dt>지속가능</dt>
+                                        <dd>지역 거버넌스</dd>
+                                        <dd>사회적 이슈 교육</dd>
+                                        <dd>평생학습 생태계</dd>
+                                    </dl>
+                                    <dl class="list-dot">
+                                        <dt>AIㆍ디지털</dt>
+                                        <dd>AI기반 교육</dd>
+                                        <dd>디지털기반 교육</dd>
+                                        <dd>스마트 융합교육</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="box-radius tit">
+                                <h4 class="tit">취약계층 입직 희망자 교육</h4>
+                                <div class="box-area col-2">
+                                    <dl class="list-dot">
+                                        <dt>생애주기</dt>
+                                        <dd>입직자 교육</dd>
+                                        <dd>재직자 교육</dd>
+                                        <dd>이·전직 교육</dd>
+                                    </dl>
+                                    <dl class="list-dot">
+                                        <dt>지역맞춤</dt>
+                                        <dd>충남 전략사업</dd>
+                                        <dd>수요맞춤형</dd>
+                                        <dd>직업교육 고도화</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- 약관/패밀리사이트 등 상단 정보 -->
+            <div class="footer-cont max-width-inner">
+                <div class="logo-grp">
+                    <h3><a href="./index.html" class="footer-logo"><img src="./images/common/icon_footer_logo.svg" alt="국토안전관리원"></a></h3>
+                </div>
+                <div class="address-grp">
+                    <div class="link-area">
+                        <a href="#" class="fwb">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <div class="txt-list">
+                        <p>31020 충청남도 천안시 서북구성환읍 대학로 91</p>
+                        <dl>
+                            <dt>개인정보 보호책임자</dt>
+                            <dd>kigon@nsu.ac.kr</dd>
+                            <dt>TEL</dt>
+                            <dd>041-580-2000</dd>
+                            <dt>FAX</dt>
+                            <dd>041-582-2117</dd>
+                            <dt>Email</dt>
+                            <dd>webmaster@nsu.ac.kr</dd>
+                        </dl>
+                    </div>
+                    <address>© 2025 BY NAMSEOUL UNIVERSITY. ALL RIGHTS RESERVED.</address>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/mobile.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

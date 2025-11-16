@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>충남N잡고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <style>
+        body {background-color: #003B90;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="skip">
+            <li><a href="#content">본문내용 바로가기</a></li>
+            <li><a href="#gnb">주내용 바로가기</a></li>
+        </ul>
+        <header>
+            <div class="head-top">
+                <h1 class="logo"><a href="./index.html">충남N잡고 메인 로고</a></h1>
+                <button type="button" class="btn-gnb">GNB 열기</button>
+            </div>
+
+            <div class="head-inner">
+                <div class="mnu-info">
+                    <!-- 기존 html에서 div로 묶어서 변수명.style.display="none", "flex"로 활용 -->
+                    <div class="before" style="display:none;">
+                        <p><b>홍길동</b>님 안녕하세요</p>
+                        <a href="#" class="btn-mypage" aria-label="마이페이지로 이동">마이페이지</a>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                    <div class="after" style="display:flex;">
+                        <a href="#" class="btn-logout login" aria-label="로그인 페이지로">로그인</a>
+                        <a href="#" class="btn-mypage access" aria-label="회원가입 페이지로">회원가입</a>
+                    </div>
+                    <button type="button" class="btn-close-gnb">GNB 닫기</button>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">사업소개</li>
+                                <li>
+                                    <a href="#">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진배경 및 과제목표</a>
+                                </li>
+                                <li>
+                                    <a href="#">조직체계 및 추진내용</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진일정</a>
+                                </li>
+                                <li>
+                                    <a href="#">협력기관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">파트너십 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육프로그램</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">교육프로그램</li>
+                                <li>
+                                    <a href="./02_교육프로그램_01_AI산업안전관리교육_02_교육프로그램소개_01.html">AI산업안전관리교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">농업드론방제교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">생성형AI 이해와 직무활용</a>
+                                </li>
+                                <li>
+                                    <a href="#">구매조달교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">장애인 인식개선 강사양성</a>
+                                </li>
+                                <li>
+                                    <a href="#">귀농귀촌농업인역량강화교육</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램신청</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">프로그램신청</li>
+                                <li>
+                                    <a href="#">프로그램 신청안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">온라인 강좌</a>
+                                </li>
+                                <li>
+                                    <a href="#">오프라인 교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">수료 인증</a>
+                                </li>
+                                <li>
+                                    <a href="#">진로 연계 상담</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">뉴스·자료실</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">뉴스·자료실</li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">카드뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#">영상뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">참여마당</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">참여마당</li>
+                                <li>
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육후기</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">제안·민원접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">1:1 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-mnu">메뉴</button>
+                </nav>
+            </div>
+        </header>
+        <main class="content-wrap sub" id="content">
+            <div class="location">
+                <ol>
+                    <li>
+                        <a href="./index.html" aria-label="메인 화면으로 이동"><i class="ico icon-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">사업소개</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">인사말</a>
+                    </li>
+                </ol>
+            </div>
+            <section class="inner-wrap business-cont">
+                <h2 class="h2-title">인사말</h2>
+                <div class="inner">
+                    <div class="desc-greet">
+                        <p>
+                            <b class="emphasis">안녕하십니까. <br>남서울대학교 대학지원체계(RISE) 사업단장 이주열입니다.</b>
+                        </p>
+                        <p>
+                            남서울대학교 RISE 사업은 지역과 대학, 기업, 지자체가 긴밀히 협력하여 <b>지역이 필요로 하는 인재를 양성
+                            하고, 지역이 안고 있는 문제를 함께 해결하는 혁신 생태계를</b> 만들어가는 것을 목표로 하고 있습니다.
+                        </p>
+                        <p>
+                            특히, 청년들이 지역에서 꿈을 펼치고 안정적으로 정착할 수 있도록 <b>산업 수요 맞춤형 교육, 현장 중심의 실
+                            무 경험, 지역 기업과의 연계 지원</b>을 강화하고 있습니다.  
+                            또한 지역의 미래 성장동력인 <b>탄소중립, 디지털 전환, 평생직업교육, 로컬 혁신</b>과 같은 분야에 역량을 집중하
+                            여 지속가능한 충남 발전에 기여하고자 합니다.
+                        </p>
+                        <p>
+                            우리 사업단은 ‘지역이 곧 대학이고, 대학이 곧 지역이다’라는 가치 아래, 충남을 더 살기 좋고 지속 가능한 
+                            공간으로 만들어가겠습니다. 앞으로도 많은 관심과 성원을 부탁드립니다.
+                        </p>
+                        <p>
+                            <span class="dp-b">감사합니다.</span>
+                            <span class="dp-b mg">남서울대학교 RISE사업단장</span> 
+                            <strong>이주열드림</strong>
+                        </p>
+                    </div>
+                    <h3 class="icon-sub-tit">보도자료</h3>
+                    <div class="box-radius">
+                        <ul class="list-line-type">
+                            <li>
+                                <a href="#" class="ellipsis">남서울대, '창작캠프' 출범…이주열 단장 "로컬 혁신 인재 양성 본격화“남서울대, '창작캠프' 출범…이주열 단장 "로컬 혁신 인재 양성 본격화“남서울대, '창작캠프' 출범…이주열 단장 "로컬 혁신 인재 양성 본격화“남서울대, '창작캠프' 출범…이주열 단장 "로컬 혁신 인재 양성 본격화“</a>
+                                <span class="date">2025-07-11</span>
+                            </li>
+                            <li>
+                                <a href="#" class="ellipsis">“지역혁신, 대학이 이끈다”…이주열 교수, 충남RISE 수행대학협의회 초대 회장 선임</a>
+                                <span class="date">2025-07-11</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- 약관/패밀리사이트 등 상단 정보 -->
+            <div class="footer-cont max-width-inner">
+                <div class="logo-grp">
+                    <h3><a href="./index.html" class="footer-logo"><img src="./images/common/icon_footer_logo.svg" alt="국토안전관리원"></a></h3>
+                </div>
+                <div class="address-grp">
+                    <div class="link-area">
+                        <a href="#" class="fwb">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <div class="txt-list">
+                        <p>31020 충청남도 천안시 서북구성환읍 대학로 91</p>
+                        <dl>
+                            <dt>개인정보 보호책임자</dt>
+                            <dd>kigon@nsu.ac.kr</dd>
+                            <dt>TEL</dt>
+                            <dd>041-580-2000</dd>
+                            <dt>FAX</dt>
+                            <dd>041-582-2117</dd>
+                            <dt>Email</dt>
+                            <dd>webmaster@nsu.ac.kr</dd>
+                        </dl>
+                    </div>
+                    <address>© 2025 BY NAMSEOUL UNIVERSITY. ALL RIGHTS RESERVED.</address>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/mobile.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>충남N잡고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <style>
+        body {background-color: #003B90;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="skip">
+            <li><a href="#content">본문내용 바로가기</a></li>
+            <li><a href="#gnb">주내용 바로가기</a></li>
+        </ul>
+        <header>
+            <div class="head-top">
+                <h1 class="logo"><a href="./index.html">충남N잡고 메인 로고</a></h1>
+                <button type="button" class="btn-gnb">GNB 열기</button>
+            </div>
+
+            <div class="head-inner">
+                <div class="mnu-info">
+                    <!-- 기존 html에서 div로 묶어서 변수명.style.display="none", "flex"로 활용 -->
+                    <div class="before" style="display:none;">
+                        <p><b>홍길동</b>님 안녕하세요</p>
+                        <a href="#" class="btn-mypage" aria-label="마이페이지로 이동">마이페이지</a>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                    <div class="after" style="display:flex;">
+                        <a href="#" class="btn-logout login" aria-label="로그인 페이지로">로그인</a>
+                        <a href="#" class="btn-mypage access" aria-label="회원가입 페이지로">회원가입</a>
+                    </div>
+                    <button type="button" class="btn-close-gnb">GNB 닫기</button>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">사업소개</li>
+                                <li>
+                                    <a href="#">인사말</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진배경 및 과제목표</a>
+                                </li>
+                                <li>
+                                    <a href="#">조직체계 및 추진내용</a>
+                                </li>
+                                <li>
+                                    <a href="#">추진일정</a>
+                                </li>
+                                <li>
+                                    <a href="#">협력기관 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">파트너십 안내</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육프로그램</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">교육프로그램</li>
+                                <li>
+                                    <a href="./02_교육프로그램_01_AI산업안전관리교육_02_교육프로그램소개_01.html">AI산업안전관리교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">농업드론방제교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">생성형AI 이해와 직무활용</a>
+                                </li>
+                                <li>
+                                    <a href="#">구매조달교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">장애인 인식개선 강사양성</a>
+                                </li>
+                                <li>
+                                    <a href="#">귀농귀촌농업인역량강화교육</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램신청</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">프로그램신청</li>
+                                <li>
+                                    <a href="#">프로그램 신청안내</a>
+                                </li>
+                                <li>
+                                    <a href="#">온라인 강좌</a>
+                                </li>
+                                <li>
+                                    <a href="#">오프라인 교육</a>
+                                </li>
+                                <li>
+                                    <a href="#">수료 인증</a>
+                                </li>
+                                <li>
+                                    <a href="#">진로 연계 상담</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">뉴스·자료실</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">뉴스·자료실</li>
+                                <li>
+                                    <a href="#">보도자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육자료</a>
+                                </li>
+                                <li>
+                                    <a href="#">카드뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#">영상뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">참여마당</a>
+                            <ul class="gnb-depth2">
+                                <li class="tit">참여마당</li>
+                                <li>
+                                    <a href="#">Q&A</a>
+                                </li>
+                                <li>
+                                    <a href="#">교육후기</a>
+                                </li>
+                                <li>
+                                    <a href="#">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="#">제안·민원접수</a>
+                                </li>
+                                <li>
+                                    <a href="#">1:1 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-mnu">메뉴</button>
+                </nav>
+            </div>
+        </header>
+        <main class="content-wrap sub" id="content">
+            <div class="location">
+                <ol>
+                    <li>
+                        <a href="./index.html" aria-label="메인 화면으로 이동"><i class="ico icon-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">사업소개</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">조직체계 및 추진내용</a>
+                    </li>
+                </ol>
+            </div>
+            <section class="inner-wrap business-cont">
+                <h2 class="h2-title">조직체계 및 추진내용</h2>
+                <div class="inner">
+                    <p class="box-radius hue">
+                        생애주기별(청년~고령층) 맞춤형 직업역량 프로그램으로 지역민의 전생애 경력개발 지원
+                    </p>
+                    <div class="box-area col-3 first">
+                        <div class="box-radius tit">
+                            <h4 class="tit">주관부서</h4>
+                            <dl class="list-tit">
+                                <dt>평생교육원, 지역협력센터</dt>
+                                <dd>생애주기별 설계ㆍ운영 총괄, <span class="br-mo"></span>지역 기반 수요 연계 지원</dd>
+                            </dl>
+                        </div>
+                        <div class="box-radius tit">
+                            <h4 class="tit">협력부서</h4>
+                            <dl class="list-tit">
+                                <dt>취창업지원센터, 수학습지원센터</dt>
+                                <dd>학습 수준 진단, 경력개발 연계, <span class="br-mo"></span>교육운영 품질관리 수행</dd>
+                            </dl>
+                        </div>
+                        <div class="box-radius tit">
+                            <h4 class="tit">참여기관</h4>
+                            <dl class="list-tit last">
+                                <dt>천안시ㆍ충남도 평생교육기관, <span class="br-mo"></span>고용노동부, 지역NPO</dt>
+                                <dd>대상자 연계, 프로그램 홍보 및 실무 참여, <span class="br-mo"></span>수료 후 연계 자문 제공</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <h3 class="icon-sub-tit">추진내용</h3>
+                    <p class="box-radius hue">
+                        청년층 직무적응, 중장년 경력전환, 고령층 재취업 등 대상별 맞춤형 교육 운영
+                    </p>
+                    <div class="box-area col-3 col-type-wrap">
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">ITㆍ디지털 인재 양성</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">청년층</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">미취업청년</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">AI, 빅데이터, UI/UX, 코딩 등</span>
+                            </li>
+                        </ul>
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">직무 복귀형</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">중장년층</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">경력단절여성</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">OA, ERP, 자격과정 등</span>
+                            </li>
+                        </ul>
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">직무 고도화</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">중장년층</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">재직자</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">산업별 심화실무 교육 등</span>
+                            </li>
+                        </ul>
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">전직·재창업</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">고령층</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">퇴직자</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">방제 드론, 실버IT, 창업 등</span>
+                            </li>
+                        </ul>
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">조직적응형</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">청년층</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">신규 입직자</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">직무기초, 협업 능력 등</span>
+                            </li>
+                        </ul>
+                        <ul class="box-radius">
+                            <li>
+                                <span class="label">맞춤형 프로그램</span>
+                                <span class="txt">실무연결형</span>
+                            </li>
+                            <li>
+                                <span class="label">연령층</span>
+                                <span class="txt">전(全)세대</span>
+                            </li>
+                            <li>
+                                <span class="label">대상자</span>
+                                <span class="txt">저소득층 등</span>
+                            </li>
+                            <li>
+                                <span class="label">주요 교육내용</span>
+                                <span class="txt normal">실습중심 직무훈련 등</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- 약관/패밀리사이트 등 상단 정보 -->
+            <div class="footer-cont max-width-inner">
+                <div class="logo-grp">
+                    <h3><a href="./index.html" class="footer-logo"><img src="./images/common/icon_footer_logo.svg" alt="국토안전관리원"></a></h3>
+                </div>
+                <div class="address-grp">
+                    <div class="link-area">
+                        <a href="#" class="fwb">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                    </div>
+                    <div class="txt-list">
+                        <p>31020 충청남도 천안시 서북구성환읍 대학로 91</p>
+                        <dl>
+                            <dt>개인정보 보호책임자</dt>
+                            <dd>kigon@nsu.ac.kr</dd>
+                            <dt>TEL</dt>
+                            <dd>041-580-2000</dd>
+                            <dt>FAX</dt>
+                            <dd>041-582-2117</dd>
+                            <dt>Email</dt>
+                            <dd>webmaster@nsu.ac.kr</dd>
+                        </dl>
+                    </div>
+                    <address>© 2025 BY NAMSEOUL UNIVERSITY. ALL RIGHTS RESERVED.</address>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/mobile.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
