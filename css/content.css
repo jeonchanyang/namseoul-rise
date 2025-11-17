@@ -282,7 +282,7 @@
 }
 
 @media(max-width:1240px){
-
+    .btn-noti-bn{padding:4.7rem 3rem;}
 }
 
 @media(max-width:1024px){

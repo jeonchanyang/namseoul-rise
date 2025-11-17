@@ -105,6 +105,7 @@ header .head-inner .btn-close-gnb { display: none; }
     .business-cont.inner-wrap .box-area.col-3 .list-tit.last dd{ margin-top:3rem}
 
     /* header */
+    body:has(.head-inner.on){overflow:hidden;}
     header { height:7rem; padding:0; } 
     header .head-inner nav .btn-mnu { display: none; } 
     header .head-top .btn-gnb,
@@ -114,17 +115,17 @@ header .head-inner .btn-close-gnb { display: none; }
     header .head-top .logo a { width:100%; height:100%; display: block; background: url(../images/common/logo_mo.svg) no-repeat 0 0 / cover; } 
     header .head-top .btn-gnb { width:5rem; height:5rem; background:url(../images/common/icon_menu_all.svg) no-repeat 50% 50% / 1.8rem auto; } 
     header .head-inner { flex-grow: 0; width:100%; height: 100%; position: fixed; top:0; right:-120%; background-color: #fff; z-index: 1; transition: all .5s; } 
-    header .head-inner.on { right:0; } 
+    header .head-inner.on {overflow-y:auto; right:0; } 
     header .head-inner .mnu-info { border-bottom: .1rem solid #DCE3EB; height: 7rem; margin-top:0; justify-content: flex-start; padding:0 1.6rem; position: relative; } 
     header .head-inner .btn-close-gnb { width:5.3rem; height:7rem; padding:0; right:0; background:url(../images/common/icon_close_gnb.svg) no-repeat 50% 50% / 1.7rem auto; } 
     header .head-inner .btn-close-gnb::before { display: none; } 
     header .head-inner nav,
-    header .head-inner .gnb { display: initial; } 
+    header .head-inner .gnb { display: initial; }
 
     .gnb.active .gnb-depth2 { display: none; } 
     .gnb > li:first-child>a,
     .gnb > li > a { padding:3.2rem 1.6rem 3rem; height:9.2rem; justify-content: flex-start; position: relative; font-weight:700; font-size:2.4rem; } 
-    .gnb > li > a::after { content: ''; display: block; width: 2rem; height:1.2rem; background: url(../images/common/icon_bbs_arrow.svg) no-repeat 0 0 / 100% auto; position: absolute; top: 50%; right:1.6rem; transform: translateY(-50%); transition: all .3s; } 
+    .gnb > li > a::after { content: ''; display: block; max-width:2rem; width: 2rem; height:1.2rem; background: url(../images/common/icon_bbs_arrow.svg) no-repeat 0 0 / 100% auto; position: absolute; top: 50%; right:1.6rem; left:unset; transform: translateY(-50%); transition: all .3s; } 
     .gnb > li.on > a::after { transform: rotate(-180deg); } 
     .gnb > li .gnb-depth2 { position:static; width:100%; height:auto; background-color: #003B90; padding:2rem 1.6rem 4.1rem; } 
     .gnb > li.on .gnb-depth2 { display: block; height: fit-content; } 
@@ -198,8 +199,8 @@ header .head-inner .btn-close-gnb { display: none; }
     .inner-wrap.notice .btn-noti-bn { height:30.8rem; background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(98, 192, 180, 1) 0%, rgba(0, 155, 180, 1) 100%); padding:3.5rem 2.3rem 0 2.6rem; display: block; border-radius: 1.5rem; position: relative; } 
     .inner-wrap.notice .btn-noti-bn::after { content:''; display:block; width:100%; height:18rem; background: url(../images/common/img_noti_bn_bg_mo.webp) no-repeat 50% 100%/auto 100%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); } 
     .inner-wrap.notice .btn-noti-bn .txt { display: block; word-break: keep-all; } 
-    .inner-wrap.notice .btn-noti-bn .badge { width:18.2rem; height:3rem; padding:.3rem 0; justify-content: center; } 
-    .inner-wrap.notice .btn-noti-bn .badge img { margin-left:1rem } 
+    .inner-wrap.notice .btn-noti-bn .badge {position:relative; z-index:1; width:18.2rem; height:3rem; padding:.3rem 0; justify-content: center; } 
+    .inner-wrap.notice .btn-noti-bn .badge img {z-index:0; margin-left:1rem } 
 
     .footer-banner-slider { padding:2.2rem 1.6rem; } 
     .footer-banner-slider [class*="swiper-button-"] { width:3.6rem; height: 3.6rem; margin-top:-1.5rem; } 
