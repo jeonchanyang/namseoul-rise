@@ -311,7 +311,7 @@
     .card .bbs-gen-list li{width:calc(100% / 3 - 2rem * 3 / 4);}
     .card.video .bbs-view .contents .video{max-width:100%; height:100%; aspect-ratio: 720 / 480;}
 
-
+    .news .bbs-gen-list li .txt-grp{padding:2rem 1.6rem;}
 
 }
 
