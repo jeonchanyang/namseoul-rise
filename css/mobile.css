@@ -41,7 +41,7 @@ header .head-inner .btn-close-gnb { display: none; }
 .inner-wrap .list-line-type > li {display: flex; justify-content: space-between;}
 .inner-wrap .list-line-type > li + li {margin-top:2.5rem; padding-top:2.5rem; border-top:.1rem solid #eee;}
 .inner-wrap .list-line-type > li a{font-size:var(--font-size-18); color:#000; width:80%;}
-.inner-wrap .list-line-type > li .date{font-size:var(--font-size-16); color:#6E6E6E}
+.inner-wrap .list-line-type > li .date{flex:0 0 auto; font-size:var(--font-size-16); color:#6E6E6E}
 
 /* 인사말 */
 .business-cont .h2-title + .inner {margin-top:8.4rem}

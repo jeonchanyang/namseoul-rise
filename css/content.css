@@ -259,7 +259,7 @@
 .img-frame.practice{width:96rem; aspect-ratio:960 / 624;}
 .img-frame + .inner{margin-top:8rem;}
 
-.box-list.emergency{gap:2rem;}
+.box-list.emergency{flex-wrap:wrap; gap:2rem;}
 .box-list.emergency li{padding:4rem 0; background:#fff; border-radius:2rem;}
 .box-list.emergency li img{display:block; width:7rem; height:7rem; margin:0 auto;}
 .box-list.emergency li img + .txt{margin-top:2.7rem;}
