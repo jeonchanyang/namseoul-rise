@@ -331,7 +331,14 @@
     .card.video .bbs-view .contents .video{max-width:100%; height:100%; aspect-ratio: 720 / 480;}
 
     .news .bbs-gen-list li .txt-grp{padding:2rem 1.6rem;}
-
+    
+    .round-box{flex-wrap:wrap;}
+    .round-box li{width:100%;}
+    .has-img .acco-wrap .list li .icon-arrow{top:4rem; right:3rem;}
+    .has-img .list-txt.type02 dd{width:100%;}
+    .has-img .acco-wrap .list-answer{padding:0 1.6rem 4rem;}
+    .has-img .acco-wrap .list li>.btn-acco{padding:2rem 1.6rem;}
+    
 }
 
 @media(max-width:768px){
@@ -342,7 +349,7 @@
 
     .card .bbs-gen-list li{width:calc(100% / 2 - 2rem * 3 / 4);}
 
-    .tab-container.sub.has-img{background:none;}
+    .tab-container.sub.has-img{background:none !important;}
     .tab-container.sub.has-img .tab-head{gap:2rem; overflow:auto; width:100%;}
     .tab-container.sub.has-img .tab-head > li{flex:0 0 auto;}
     .tab-container.sub.has-img .tab-head::-webkit-scrollbar{display:none;}
