@@ -140,6 +140,7 @@
 .tab-container.sub.has-img.farm{background:url(../images/common/img_farm.webp) right top 6rem / 32.3rem 24.9rem no-repeat;}
 .tab-container.sub.has-img.job{background:url(../images/common/img_job.webp) right top 6rem / 32.3rem 24.9rem no-repeat;}
 .tab-container.sub.has-img.drone{background:url(../images/common/img_drone.webp) right top 6rem / 33rem 24.9rem no-repeat;}
+.tab-container.sub.has-img.handicapped{background:url(../images/common/img_handicapped.webp) right top 6rem / 32.3rem 25.9rem no-repeat;}
 
 .tab-container.sub.has-img .tab-head{width:65%;}
 .acco-wrap .list li{position:relative; background:#fff; border-radius:2rem;}
@@ -289,6 +290,8 @@
 .round-box .txt-grp .title + p,
 .round-box .txt-grp p + p{margin-top:2rem;}
 
+.handicapped .round-box .txt-grp > p{line-height:160%;}
+.handicapped .round-box .txt-grp > .bullet + .bullet{margin:0;} 
 
 .img-frame{display:block; max-width:100%; margin:0 auto;}
 .img-frame img{display:block; width:100%;}
@@ -310,7 +313,7 @@
 .h4-title{margin-bottom:1.5rem; font-weight:700; line-height:2.4rem; font-size:2rem;}
 
 /* wh-box */
-.wh-box{display:flex; justify-content:center; padding:2rem; text-align:center; box-shadow:0 0 2rem 0 rgba(0, 0, 0, .1);}
+.wh-box{display:flex; justify-content:center; padding:2rem; text-align:center; box-shadow:0 0 2rem 0 rgba(0, 0, 0, .1); border-radius:2rem;}
 .wh-box .title{font-weight:700; line-height:3.8rem; font-size:2rem;}
 .wh-box.badge-type{display:flex; justify-content:flex-start; gap:3rem;}
 .wh-box .badge-grp{display:inline-flex; gap:.8rem;}
