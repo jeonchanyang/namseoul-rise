@@ -148,7 +148,7 @@ header .head-inner .btn-close-gnb { display: none; }
     .footer-cont .address-grp { margin-top:0 } 
 
     /* main */
-    .inner-wrap.main-bn { padding:0; height: calc(100vh - 7rem); } 
+    .inner-wrap.main-bn { padding:0; min-height:60rem; height: calc(100vh - 7rem); } 
     .inner-wrap.main-bn .bg { left: -9.333vw; height: 100%; } 
 
     .inner-wrap.main-bn .img-boy { display: none; } 
@@ -230,7 +230,7 @@ header .head-inner .btn-close-gnb { display: none; }
     .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:100%}
 
     /* AI산업안전관리교육 */
-    .tab-container.sub.has-img .acco-wrap .list .list-answer .bg-box { flex-direction: column; gap: 3rem; padding:3rem; } 
+    .tab-container.sub.has-img .acco-wrap .list .list-answer .bg-box {flex-wrap:wrap; gap: 1rem; padding:3rem; } 
     .tab-container.sub.has-img .acco-wrap .list .list-answer .bg-box dd { line-height: 1.5; } 
     .tab-container.sub.has-img .acco-wrap .list .list-answer .bg-box dd::before { display: none; } 
     .tab-container.sub.has-img .acco-wrap .list .list-answer .list-txt { flex-direction: column; } 
@@ -256,8 +256,8 @@ header .head-inner .btn-close-gnb { display: none; }
     /*  조직체계 및 추진내용 */
     .inner-wrap .box-area.col-3.col-type-wrap{flex-direction: column;}
     .inner-wrap .box-area.col-3.col-type-wrap > * {width:100%}
+    .business-cont.inner-wrap .box-area.col-3 ul.box-radius{width:100%;}
     .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:calc(100% / 2 - 2rem * 1 / 2)}
-    
 
 
     /* 보도자료 목록 */

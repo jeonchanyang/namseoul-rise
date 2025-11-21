@@ -144,7 +144,7 @@
 .tab-container.sub.has-img .tab-head{width:65%;}
 .acco-wrap .list li{position:relative; background:#fff; border-radius:2rem;}
 .acco-wrap .list li + li{margin-top:1rem;}
-.acco-wrap .list li > .btn-acco{display:flex; gap:2.7rem; align-items:center; position:relative; width:100%; padding:3rem 4rem;}
+.acco-wrap .list li > .btn-acco{display:flex; flex-wrap:wrap; gap:1rem 2.7rem; align-items:center; position:relative; width:100%; padding:3rem 4rem;}
 .acco-wrap .list li .badge{display:inline-block; height:3.6rem; padding:.2rem 1.8rem; color:#fff; font-weight:500; line-height:160%; font-size:2rem; background:#9C9C9C; border-radius:1.8rem;}
 .acco-wrap .list li .tit{font-weight:700; line-height:160%; font-size:2.4rem;}
 .acco-wrap .list li .icon-arrow{display:inline-block; position:absolute; top:50%; right:4rem;  width:2rem; height:1.2rem; margin-top:-.6rem; background:url(../images/common/icon_bbs_arrow.svg) center center / 100% no-repeat;}
@@ -258,8 +258,8 @@
 .card.video .bbs-view .contents .video{width:72rem; height:48rem; margin:0 auto;}
 .card.video .bbs-view .contents .video > *{display:block; width:100%; height:100%;}
 
-.wh-box{padding:4rem 4rem 3.3rem; background:#fff; border-radius:2rem;}
-.wh-box p{line-height:160%;}
+.wht-box{display:block; padding:4rem 4rem 3.3rem; background:#fff; border-radius:2rem;}
+.wht-box p{line-height:160%;}
 
 .round-box{display:flex; gap:2rem;}
 .round-box li{overflow:hidden; width:50%; background:#fff; border-radius:2rem;}
@@ -373,7 +373,7 @@
     .has-img .acco-wrap .list li>.btn-acco{padding:2rem 1.6rem;}
     
     .wh-box.badge-type{gap:1rem 2rem; flex-wrap:wrap; justify-content:center;}
-
+    .acco-wrap .list li .tit{width:100%; text-align:left;}
 }
 
 @media(max-width:768px){
