@@ -67,7 +67,6 @@ header .head-inner .btn-close-gnb { display: none; }
 .business-cont .list-diagram li .txt{ font-size:min(1.733vw, 18px); line-height:1.5; }
 .business-cont .box-radius.shadow {font-size:var(--font-size-20); font-weight:700; padding:2.1rem; text-align: center; margin-bottom:4rem; line-height: 1.5; word-break: keep-all;}
 
-
 /* 조직체계 및 추진내용 */
 .business-cont .box-radius.hue{background-color:#009BB4; border-radius:2rem; color:#fff; font-size:var(--font-size-20); font-weight: 700; line-height: 1.5; word-break: keep-all; padding:2.1rem; text-align: center;}
 .business-cont .box-radius.hue + .box-area.col-3 {margin: 3rem 0 8rem}
@@ -82,8 +81,48 @@ header .head-inner .btn-close-gnb { display: none; }
 .business-cont.inner-wrap .box-area.col-3 ul.box-radius .txt{font-size:var(--font-size-18);}
 .business-cont.inner-wrap .box-area.col-3 ul.box-radius .txt.normal{font-weight: 400;}
 
+/* 추진일정 */
+.business-cont .list-bubble{ display: flex; position: relative; justify-content: space-between; overflow: hidden;}
+.business-cont .list-bubble::after{content: ''; display: block; width: 100%; height: 1rem; background-color: #AEC8E6; position: absolute; bottom:4rem;}
+.business-cont .list-bubble>li {display: flex; flex-direction: column; align-items:center; justify-content: center; width:20%; gap: 4rem; z-index: 1;}
+.business-cont .list-bubble>li + li {margin-left:3rem;}
+.business-cont .list-bubble>li>* {display: block; background-color: #fff; text-align:center; font-size:1.8rem;}
+.business-cont .list-bubble .box-bubble { border-radius: 2rem; width:100%; height:20rem; padding:4rem 1rem 3rem; position: relative; line-height: 1.5; word-break: keep-all;}
+.business-cont .list-bubble .box-bubble::before,
+.business-cont .list-bubble .box-bubble::after {content: ''; display: block;}
+.business-cont .list-bubble .box-bubble::before{display: block; width: 6rem; height: 6rem; margin:0 auto 2.5rem; background: url(../images/common/icon_bubble_01.svg) no-repeat 0 0/100% auto;}
+.business-cont .list-bubble .box-bubble::after{position:absolute; bottom: -2rem; left:50%; transform: translateX(-50%); width:0;height:0;border-style:solid;border-width:2rem 1.5rem 0 1.5rem;border-color:#fff transparent transparent transparent;}
+.business-cont .list-bubble .box-bubble .br-mo {display: block;}
+.business-cont .list-bubble>li:nth-child(2) .box-bubble::before {background-image: url(../images/common/icon_bubble_02.svg);}
+.business-cont .list-bubble>li:nth-child(3) .box-bubble::before {background-image: url(../images/common/icon_bubble_03.svg);}
+.business-cont .list-bubble>li:nth-child(4) .box-bubble::before {background-image: url(../images/common/icon_bubble_04.svg);}
+.business-cont .list-bubble>li:nth-child(5) .box-bubble::before {background-image: url(../images/common/icon_bubble_05.svg);}
+.business-cont .list-bubble .box-year {border-radius: 10rem; width:9rem; height: 9rem; border:.6rem solid #009BB4; display: flex; align-items: center; justify-content: center; font-weight: 700;}
+.business-cont .list-bubble + .icon-sub-tit {margin-top:8rem}
+.business-cont .list-bubble + .icon-sub-tit {margin-top:8rem}
+.business-cont .box-radius.list-year li {display: flex; gap: 1rem;}
+.business-cont .box-radius.list-year li + li {margin-top:3rem; padding-top:3rem; border-top:.1rem solid #eee}
+.business-cont .box-radius.list-year .date{font-size:1.6rem; color:#6e6e6e; min-width:15rem;}
+.business-cont .box-radius.list-year .txt{font-size:1.8rem; color:#000; line-height: 1.5; font-weight:500;}
 
+/* 협력기관 */
+.business-cont .list-partner .box-radius {display: flex; flex-direction: column; padding:3.5rem 3rem 2.6rem;}
+.business-cont .list-partner .logo{height:6rem; width:auto; text-align: center;}
+.business-cont .list-partner .logo img{width:auto; height:100%}
+.business-cont .list-partner .tit{font-size:2rem; font-weight:700; border-top:.1rem solid #eee; margin-top:3.5rem; padding-top:2.6rem; text-align: center;}
+.business-cont .list-partner .desc{font-size:1.8rem; line-height: 1.5; word-break:  keep-all; padding:2rem 1rem 0; text-align: center;}
 
+/* 파트너십 안내 */
+.business-cont .intro-partnership{font-size:2.4rem; font-weight:500; line-height: 1.5; height: 26.7rem; display: flex; align-items: center; background: url(../images/common/img_business_02.webp) no-repeat 0 50%/25.7rem auto; padding-left: 32.4rem;}
+.business-cont .intro-partnership + .icon-sub-tit,
+.business-cont .list-benefit + .icon-sub-tit {margin:8rem 0 3rem;}
+.business-cont .list-benefit {display: flex; gap: 2rem;}
+.business-cont .list-benefit li{display: flex; flex-direction: column; align-items: center; justify-content: center; padding:0 1rem; background-color: #fff; border-radius: 2rem; height: 22rem; width:20%;}
+.business-cont .list-benefit .num {background-color: #003B90; border-radius: 6rem; width:6rem; height:6rem; margin-bottom:2.2rem; color:#fff; font-size:2rem; font-weight:700; text-align: center; line-height: 6rem;;}
+.business-cont .list-benefit .txt {font-size:1.8rem; font-weight: 500; line-height: 1.5; text-align: center;}
+.business-cont .list-benefit .txt .br-mo{display: block;}
+.business-cont .box-radius.info-email { font-size:1.8rem; line-height: 1.5;}
+.business-cont .box-radius.info-email .email { font-size:2rem; font-weight:700; margin-top:1.2rem; display: block; min-height: 4.6rem; background: url(../images/common/icon_email.svg) no-repeat 0 0/5.1rem auto; padding-left:6rem;}
 
 @media(max-width:1024px) { header { padding:0 1.5rem } 
     header .head-top { border-bottom:0; padding:0; } 
@@ -92,17 +131,6 @@ header .head-inner .btn-close-gnb { display: none; }
     .footer-cont .txt-list dl { flex-wrap:wrap;}
     .footer-cont .txt-list p { margin-bottom: 1rem; } 
     .bbs-view .tit-grp .tit { word-break: keep-all; } 
-
-    /* 과제목표 및 추진전략 */
-    .business-cont .list-diagram { height:max(27vw, 29vw); margin:4rem 0 6rem}
-    .business-cont.inner-wrap .box-radius.cont > .box-area.col-2 {flex-direction: column;}
-    .business-cont .box-area.col-2 > .box-radius.tit {width:100%}
-
-    /*  조직체계 및 추진내용 */
-    .business-cont.inner-wrap .box-area.col-3.first {flex-direction: column;}
-    .business-cont.inner-wrap .box-area.col-3.first > *{width:100%}
-    .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:calc(100% / 2 - 2rem * 1 / 2)}
-    .business-cont.inner-wrap .box-area.col-3 .list-tit.last dd{ margin-top:3rem}
 
     /* header */
     body:has(.head-inner.on){overflow:hidden;}
@@ -211,6 +239,37 @@ header .head-inner .btn-close-gnb { display: none; }
     .business-cont .desc-greet::before {position:initial}
 
     /* 과제목표 및 추진전략 */
+    .business-cont .list-diagram { height:max(27vw, 29vw); margin:4rem 0 6rem}
+    .business-cont.inner-wrap .box-radius.cont > .box-area.col-2 {flex-direction: column;}
+    .business-cont .box-area.col-2 > .box-radius.tit {width:100%}
+
+    /*  조직체계 및 추진내용 */
+    .business-cont.inner-wrap .box-area.col-3.first {flex-direction: column;}
+    .business-cont.inner-wrap .box-area.col-3.first > *{width:100%}
+    .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:calc( 50% - 1rem)}
+    .business-cont.inner-wrap .box-area.col-3 .list-tit.last dd{ margin-top:3rem}
+
+    /* 추진일정 */
+    .business-cont .list-bubble {flex-direction: column; width:80%; margin:0 auto;}
+    .business-cont .list-bubble::after{width: 1rem; height: 100%; bottom:auto; left:4rem;}
+    .business-cont .list-bubble li {flex-direction: row-reverse; width:100%;}
+    .business-cont .list-bubble li + li{margin:3rem 0 0}
+    .business-cont .list-bubble .box-bubble {width:calc(100% - 13rem)}
+    .business-cont .list-bubble .box-bubble::after {bottom:43.5%; left: -2rem; transform: translate(0, 0); width:0; height:0; border-style:solid; border-width:1.5rem 2rem 1.5rem 0;border-color:transparent #fff transparent transparent;}
+    .business-cont .list-bubble .box-bubble .br-mo {display: none;}
+
+    /* 파트너쉽 */
+    .business-cont .list-benefit {flex-direction: column;}
+    .business-cont .list-benefit li{width:100%;}
+    .business-cont .list-benefit .txt .br-mo{display: none;}
+
+    /* 파트너십 안내 */
+    .business-cont .intro-partnership{background-size: 23rem auto; padding-left: 29.7rem; height: 24rem;}
+}
+
+
+@media(max-width:768px) {
+    /* 과제목표 및 추진전략 */
     .inner-wrap .box-radius.cont {padding:5rem 4rem 6rem}
     .business-cont .box-visual {width:100%; height:min(30rem, 35.9rem)}
     .business-cont .txt-intro .br-mo,
@@ -226,7 +285,7 @@ header .head-inner .btn-close-gnb { display: none; }
     .business-cont .list-diagram li .emphasis {font-size:var(--font-size-20)}
     .business-cont .list-diagram li .txt {font-size:var(--font-size-18)}
 
-    /*  조직체계 및 추진내용 */
+    /* 조직체계 및 추진내용 */
     .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:100%}
 
     /* AI산업안전관리교육 */
@@ -237,8 +296,17 @@ header .head-inner .btn-close-gnb { display: none; }
 
     /* 보도자료 목록 */
     .news .bbs-gen-list li > a { background-color: transparent; } 
-    .news .bbs-gen-list li .img-grp { margin: 0 auto; border-radius: 3rem; overflow: hidden; } 
+    .news .bbs-gen-list li .img-grp { margin: 0 auto; border-radius: 3rem; overflow: hidden; }
+    
+    /* 추진일정 */
+    .business-cont .list-bubble {width: 100%; padding:3rem 1rem 0;}
+    .business-cont .list-bubble::after {left:5.5rem}
+    .business-cont .list-bubble>li {gap:3rem;}
+    .business-cont .box-radius.list-year {padding:3rem}
+    .business-cont .box-radius.list-year li {flex-direction: column;}
 
+    /* 파트너십 안내 */
+    .business-cont .intro-partnership{background: none; padding-left:0; height:auto;}
 }
 
 @media (max-width: 575px) { 
@@ -257,8 +325,6 @@ header .head-inner .btn-close-gnb { display: none; }
     .inner-wrap .box-area.col-3.col-type-wrap{flex-direction: column;}
     .inner-wrap .box-area.col-3.col-type-wrap > * {width:100%}
     .business-cont.inner-wrap .box-area.col-3 ul.box-radius{width:100%;}
-    .business-cont.inner-wrap .box-area.col-3.col-type-wrap > * {width:calc(100% / 2 - 2rem * 1 / 2)}
-
 
     /* 보도자료 목록 */
     .bbs-gen-list li > a { flex-wrap:wrap; } 
@@ -287,7 +353,6 @@ header .head-inner .btn-close-gnb { display: none; }
 
     /* 과제목표 및 추진전략 */
     .business-cont .list-diagram li .tit {font-size: var(--font-size-24);}
-
     
     /* AI산업안전관리교육 */
     .tab-container.sub .tab-head .tab-menu { font-size: 1.6rem } 
