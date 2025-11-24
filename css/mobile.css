@@ -307,6 +307,8 @@ header .head-inner .btn-close-gnb { display: none; }
 
     /* 파트너십 안내 */
     .business-cont .intro-partnership{background: none; padding-left:0; height:auto;}
+
+    .business-cont .h2-title + .inner{margin-top:2.4rem;}
 }
 
 @media (max-width: 575px) { 
@@ -340,7 +342,7 @@ header .head-inner .btn-close-gnb { display: none; }
     .business-cont .list-diagram li .emphasis {font-size:var(--font-size-20)}
     .business-cont .list-diagram li .txt {font-size:var(--font-size-18)}
     .business-cont.inner-wrap .box-radius.tit .box-area.col-2 {flex-direction: column;}
-    .business-cont.inner-wrap .box-radius.tit .list-dot {width:100%}
+    .business-cont.inner-wrap .box-radius.tit .list-dot {width:100%; border-bottom:none}
 
     /* AI산업안전관리교육 */
     .tab-container.sub.has-img .tab-head { gap: 4rem; } 

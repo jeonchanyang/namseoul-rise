@@ -139,6 +139,14 @@ const gnbOpen = () => {
     });
 }
 
+// gnb btn
+const gnbBtn = () =>{
+    const btn = document.querySelector('#gnb .btn-mnu');
+    btn.addEventListener('click', () => {
+        btn.previousElementSibling.classList.toggle('active');
+    });
+}
+
 // dropdown
 function DropdownMenus() {
     const dropdownButtons = document.querySelectorAll(".btn-dropdown");
@@ -361,6 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
      //mobile
     if (window.innerWidth > 1024) {
         gnbOpen();
+        gnbBtn();
     }
     if (window.innerWidth < 1024) {
         initMoDropdown();

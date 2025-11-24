@@ -323,7 +323,7 @@
 
 /* wh-box */
 .wh-box{display:flex; justify-content:center; padding:2rem; text-align:center; box-shadow:0 0 2rem 0 rgba(0, 0, 0, .1); border-radius:2rem;}
-.wh-box .title{font-weight:700; line-height:3.8rem; font-size:2rem;}
+.wh-box .title{font-weight:700; line-height:2.4rem; font-size:2rem;}
 .wh-box.badge-type{display:flex; justify-content:flex-start; gap:3rem;}
 .wh-box .badge-grp{display:inline-flex; gap:.8rem;}
 .wh-box .badge-grp .badge{display:inline-block; min-width:13rem; padding:.9rem; color:#fff; font-weight:700; font-size:1.4rem; line-height:2.2rem; background:#009BB4; border-radius:1rem;}
