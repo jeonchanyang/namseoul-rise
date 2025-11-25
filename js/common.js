@@ -285,7 +285,6 @@ function initMoDropdown() {
 
                 let labelText = '';
                 // tabmenu
-                debugger
                 if (item.classList.contains('tab-menu')) {
                     const tabId = item.getAttribute('data-tab');
                     const container = dropdown.closest('.tab-container'); 

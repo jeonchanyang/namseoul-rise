@@ -72,7 +72,7 @@
 
 .box-list{display:flex; gap:2.4rem;}
 .box-list li{width:100%;}
-.box-list li > a{display:flex; flex-direction:column; width:100%; height:100%; padding-top:4rem; background:#fff; border-radius:2rem; transition:all .3s;}
+.box-list li > a{display:flex; flex-direction:column; width:100%; height:36rem; padding-top:4rem; background:#fff; border-radius:2rem; transition:all .3s;}
 .box-list li:hover > a{color:#fff; background:#009BB4;}
 .box-list li p{font-weight:700; font-size:2rem; text-align:center;}
 .box-list li p + .lesson{margin-top:1rem;}

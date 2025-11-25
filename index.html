@@ -472,7 +472,7 @@
                 </div>
                 <div class="address-grp">
                     <div class="link-area">
-                        <a href="#" class="fwb">개인정보처리방침</a>
+                        <a href="#" class="fwb" onclick="openModal(event)" data-modal-id="modal000">개인정보처리방침</a>
                         <a href="#">이메일무단수집거부</a>
                     </div>
                     <div class="txt-list">
@@ -501,6 +501,21 @@
             </div>
         </footer>
     </div>
+
+    <!-- modal -->
+    <div class="cmp-modal" id="modal000"> 
+        <div class="dimmed"></div>
+        <div class="modal-container">
+            <div class="modal-body">
+                <img src="./images/common/sample-img.png" alt="">
+            </div>
+            <!-- modal 우측 상단 닫기 아이콘 -->
+            <button type="button" class="btn-close close-modal" onclick="closeModal(event)">닫기 버튼</button>
+        </div>
+    </div>
+
+
+
     <script src="./js/common.js"></script>
     <script src="./js/mobile.js"></script>
     <script>
