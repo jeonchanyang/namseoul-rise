@@ -315,6 +315,35 @@
 
 .bg-box + .h4-title{margin-top:4rem;}
 
+.inner-wrap.program .h2-title + .inner{margin-top:7.7rem;}
+.program-wrap{display:flex; flex-direction:column; align-items:center;}
+.program-wrap img{display:block; width:15.5rem;}
+.program-wrap img + .title{margin-top:3rem;}
+.program-wrap .title{display:block; max-width:75rem; width:100%; color:#003B90; font-weight:700; line-height:140%; font-size:3rem; text-align:center;}
+.program-wrap .title + p{margin-top:1rem;}
+.program-wrap p{line-height:160%; font-size:1.8rem;}
+.program-wrap + .box-area{margin-top:5rem;}
+.inner-wrap.program .box-area{display:flex; flex-wrap:wrap; gap:3rem 2rem;}
+.inner-wrap.program .box-area li{display:flex; flex-direction:column; overflow:hidden; width:calc(100% / 3 - 2rem * 2 / 3); height:36rem; padding-top:3rem; background:#fff; border-radius:2rem;}
+.inner-wrap.program .box-area li .tit{display:flex; justify-content:center; align-items:center; min-height:6.8rem; font-weight:700; line-height:140%; font-size:2.4rem; text-align:center;}
+.inner-wrap.program .box-area li .tit + img{display:block; margin:2.5rem auto 0;}
+.inner-wrap.program .box-area li .btn-grp{display:flex; margin-top:auto;}
+.inner-wrap.program .box-area li .btn-grp a{display:inline-flex; justify-content:center; align-items:center; width:100%; height:8rem; color:#fff; font-weight:500; line-height:120%; font-size:1.8rem; text-align:center;}
+.inner-wrap.program .box-area li .btn-grp a.btn-introduce{background:#003B90;}
+.inner-wrap.program .box-area li .btn-grp a.btn-application{background:#009BB4;}
+
+
+.inner-wrap.online .top-grp{display:flex;}
+.inner-wrap.online .top-grp > .right-grp{margin-left:auto;}
+.inner-wrap.online select.ipt{min-width:26.5rem;}
+.inner-wrap.online .top-grp + .bbs-gen-list{margin-top:3rem;}
+
+.inner-wrap.card.online .bbs-gen-list li .tit{min-height:unset; font-weight:700; line-height:2.4rem; font-size:1.6rem;}
+.inner-wrap.card.online .bbs-gen-list li .tit + .txt{margin-top:1rem;}
+.inner-wrap.card.online .bbs-gen-list li .txt{font-weight:700; line-height:120%; font-size:2rem;}
+
+
+
 
 /* title */
 .h3-title{position:relative; margin-bottom:2.5rem; font-weight:700; font-size:3rem;}
@@ -410,6 +439,12 @@
     .bg-box dd:before{display:none;}
     .tab-container.sub .tab-content .info-txt{width:100%; min-height:unset; margin-bottom:3rem;}
     .inner + .inner{margin-top:4rem;}
+
+    .inner-wrap.program .h2-title + .inner{margin-top:2.4rem;}
+    .program-wrap .title{font-size:2.4rem;}
+    .program-wrap p{font-size:1.6rem;}
+    .inner-wrap.program .box-area li{width:100%;}
+
 }
 
 @media(max-width:560px){
