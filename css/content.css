@@ -338,7 +338,6 @@
 .inner-wrap.online select.ipt{min-width:26.5rem;}
 .inner-wrap.online .top-grp + .bbs-gen-list{margin-top:3rem;}
 
-.inner-wrap.card.online .bbs-gen-list li .tit{min-height:unset; font-weight:700; line-height:2.4rem; font-size:1.6rem;}
 .inner-wrap.card.online .bbs-gen-list li .tit + .txt{margin-top:1rem;}
 .inner-wrap.card.online .bbs-gen-list li .txt{font-weight:700; line-height:120%; font-size:2rem;}
 
