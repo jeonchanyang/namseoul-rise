@@ -253,6 +253,15 @@
 .card .bbs-gen-list li > a .txt-grp{padding:2rem;}
 .card .bbs-gen-list li > a .txt-grp .tit{display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden; min-height:4.8rem; font-weight:700; line-height:2.4rem; font-size:2rem; text-overflow:ellipsis; -webkit-line-clamp:2;}
 .card .bbs-gen-list li > a .txt-grp .tit + *{margin-top:1.5rem;}
+.card .bbs-gen-list li > a .txt-grp .badge{font-weight:700; line-height:2.4rem; font-size:1.6rem;}
+.card .bbs-gen-list li > a .txt-grp .badge.type01{color:#003B90;}
+.card .bbs-gen-list li > a .txt-grp .badge.type02{color:#FDBC00;}
+.card .bbs-gen-list li > a .txt-grp .badge.type03{color:#9479D3;}
+.card .bbs-gen-list li > a .txt-grp .badge.type04{color:#009BB4}
+.card .bbs-gen-list li > a .txt-grp .badge.type05{color:#26ACEF;}
+.card .bbs-gen-list li > a .txt-grp .badge.type06{color:#62C0B4;}
+
+.card .bbs-gen-list li > a .txt-grp .badge + .tit{margin-top:1rem;}
 .card .bbs-view .contents > img + img{margin-top:2rem;}
 
 .card.video .bbs-gen-list li > a .img-grp{position:relative; aspect-ratio:unset;}
