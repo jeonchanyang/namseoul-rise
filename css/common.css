@@ -74,7 +74,7 @@ select.ipt02{background:url(../images/common/icon_select_down.svg) right top .6r
 .icon-home::before{background:url(../images/common/icon_home.svg) center center / 100% no-repeat;}
 .icon-search::before{background-image:url(../images/common/icon_search.svg);}
 .icon-h3::before{background-image:url(../images/common/icon_h3.svg);}
-
+.icon-sign::before{background-image:url(../images/common/icon_sign.svg);}
 
 /* location */
 .location ol{display:inline-flex; gap:1.2rem; align-items:center;}
@@ -111,7 +111,7 @@ select.ipt02{background:url(../images/common/icon_select_down.svg) right top .6r
 .btn-normal{color:var(--font-color-black); background-color:var(--normal-color); border:.1rem solid var(--font-color-gray);}
 .btn-normal.wh{background:#fff; border-color:#A6A8AB;}
 .btn-cmn.gray{background-color:var(--font-color-gray);}
-.btn-cmn.sec{background-color:#1D76BC;}
+.btn-cmn.sec{background-color:#1464FF;}
 .btn-cmn.green{background-color:#8AC650;}
 .btn-cmn.dark-blue{background-color:#3B4963;}
 
