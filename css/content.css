@@ -152,6 +152,7 @@
 .acco-wrap .list li .tit{font-weight:700; line-height:160%; font-size:2.4rem;}
 .acco-wrap .list li .icon-arrow{display:inline-block; position:absolute; top:50%; right:4rem;  width:2rem; height:1.2rem; margin-top:-.6rem; background:url(../images/common/icon_bbs_arrow.svg) center center / 100% no-repeat;}
 .acco-wrap .list-answer{display:none; padding:0 4rem 5rem;}
+.acco-wrap .list-answer .faq-answer{font-size:var(--font-size-18)}
 .bg-box{display:flex; gap:8rem; align-items:center; padding:2.7rem 5rem; background:rgba(227, 229, 234, 0.5); border-radius:1rem;}
 .bg-box dt{flex:0 0 auto; color:#009BB4; font-weight:700; font-size:2rem;}
 .bg-box dd{position:relative; font-weight:400; font-size:1.8rem;}
