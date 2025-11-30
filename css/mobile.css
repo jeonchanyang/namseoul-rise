@@ -319,10 +319,11 @@ header .head-inner .btn-close-gnb { display: none; }
     .inner-wrap .h2-title+.tab-container.sub { padding-top: 6rem } 
     .tab-container.sub.has-img { background: none; } 
     .tab-container.sub.has-img .tab-head { width: 100%; } 
-    .acco-wrap .list li>.btn-acco { flex-direction: column; align-items: flex-start; gap: 1.7rem; padding: 2rem 3rem; } 
-    .acco-wrap .list li .icon-arrow { top:3rem } 
-    .acco-wrap .list li .tit { text-align: left; }
-    
+    .acco-wrap .list li>.btn-acco { flex-direction: column; align-items: flex-start; gap: 1.7rem; padding: 2rem; } 
+    .acco-wrap .list li .icon-arrow {top:3.5rem; right:2rem;} 
+    .acco-wrap .list li .tit {padding-right:3rem; text-align:left; font-size:2rem;}
+    .acco-wrap .list-answer{padding:0 2rem 2rem;}
+
     /*  조직체계 및 추진내용 */
     .inner-wrap .box-area.col-3.col-type-wrap{flex-direction: column;}
     .inner-wrap .box-area.col-3.col-type-wrap > * {width:100%}
