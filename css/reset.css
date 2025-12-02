@@ -441,7 +441,8 @@ html,body{height:100vh; margin: 0; padding: 0; color: #121212; font-size: 62.5%;
 body *{font-family: inherit; font-style: normal; -webkit-text-size-adjust: none; font-size:inherit;}
 input{background-color:#f1f3f8;}
 input:focus,
-input:focus-visible{background-color:#E8F2FF; outline:none;}
+input:focus-visible,
+textarea:focus{background-color:#E8F2FF; outline:none;}
 input::placeholder{color:#6C6C6C;}
 /* skip nav */
 .skip {
